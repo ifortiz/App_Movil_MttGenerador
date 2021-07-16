@@ -6,8 +6,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIClient {
-   private static final String BASE_URL="http://172.16.58.84:8888/"; /*trabajo*/
-  // private static final String BASE_URL="http://192.168.1.2:8888/"; /*casa*/
+  // private static final String BASE_URL="http://172.16.58.84:8888/"; /*trabajo*/
+   private static final String BASE_URL="http://192.168.1.2:8888/"; /*casa*/
 
     private static APIClient instance;
     private Retrofit retrofit;
