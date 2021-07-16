@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_white">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Los colores de los campos son basados en:"
+        android:textSize="18sp"
+        android:textColor="@color/colorFondo"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/colorojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Color Rojo:"
+        android:textSize="17sp"
+        android:textColor="@color/editext_error"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/colorojo"
+        app:layout_constraintStart_toEndOf="@+id/colorojo"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Es un error y debe cambiarse la escobilla"
+        android:textSize="16sp"
+        android:textColor="@color/colorFondo"
+        />
+    <TextView
+        android:id="@+id/colorverde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/colorojo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Color Verde:"
+        android:textSize="17sp"
+        android:textColor="@color/editext_success"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/colorverde"
+        app:layout_constraintStart_toEndOf="@+id/colorverde"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="la lectura ha sido Corecta"
+        android:textSize="16sp"
+        android:textColor="@color/colorFondo"
+        />
+   <TextView
+       android:id="@+id/clickok"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="OK"
+       android:textColor="@color/colorFondo"
+       android:textSize="25sp"
+       android:minWidth="80dp"
+       android:minHeight="50dp"
+       android:gravity="center"
+       app:layout_constraintTop_toBottomOf="@+id/colorverde"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginEnd="45dp"
+       android:layout_marginTop="35dp"
+      android:paddingBottom="30dp"
+       android:paddingTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

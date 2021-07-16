@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:minHeight="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    android:id="@+id/clickview"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/num_ot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorFondo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Numero de OT: 8440"
+         />
+
+
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2021/05/22"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"/>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/showExpandable"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:layout_constraintTop_toBottomOf="@+id/num_ot"
+      app:layout_constraintStart_toStartOf="@id/num_ot"
+      >
+      <TextView
+          android:id="@+id/unidad"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Unidad: Electrica"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:textSize="17sp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="15dp"/>
+      <TextView
+          android:id="@+id/responsable"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="17sp"
+          android:text="Responsable: Genaro Vite Luria"
+          app:layout_constraintTop_toBottomOf="@id/unidad"
+          app:layout_constraintStart_toStartOf="@id/unidad"
+          android:layout_marginTop="15dp"/>
+
+      <TextView
+          android:id="@+id/titleactividades"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="17sp"
+          android:text="Actividades:"
+
+          android:textColor="@color/colorFondo"
+          app:layout_constraintTop_toBottomOf="@id/responsable"
+          app:layout_constraintStart_toStartOf="@id/unidad"
+          android:layout_marginTop="15dp"
+          />
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerActvidades"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@id/titleactividades"
+            android:layout_margin="15dp"
+       />
+      <TextView
+          android:id="@+id/modificacionestitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/recyclerActvidades"
+          app:layout_constraintStart_toStartOf="@+id/unidad"
+          android:layout_marginTop="10dp"
+          android:text="Modificacioness o partes cambiada"
+          android:textColor="@color/colorFondo"
+          android:textSize="17sp"
+     />
+      <TextView
+          android:id="@+id/text_modificaciones"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/modificacionestitle"
+          app:layout_constraintStart_toStartOf="@+id/unidad"
+          android:layout_marginTop="10dp"
+          />
+      <TextView
+          android:id="@+id/condicionestitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/text_modificaciones"
+          app:layout_constraintStart_toStartOf="@+id/unidad"
+          android:layout_marginTop="10dp"
+          android:text="Condicion del objeto de mantenimiento"
+          android:textColor="@color/colorFondo"
+          android:textSize="17sp"
+          />
+      <TextView
+          android:id="@+id/text_condiciones"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/condicionestitle"
+          app:layout_constraintStart_toStartOf="@+id/unidad"
+          android:layout_marginTop="10dp"
+          />
+      <TextView
+          android:id="@+id/pendientestitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/text_condiciones"
+          app:layout_constraintStart_toStartOf="@+id/unidad"
+          android:text="Pendientes"
+          android:layout_marginTop="10dp"
+          android:textColor="@color/colorFondo"
+          android:textSize="17sp"
+          />
+      <TextView
+          android:id="@+id/text_pendientes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/pendientestitle"
+          app:layout_constraintStart_toStartOf="@+id/unidad"
+          android:layout_marginTop="10dp"
+          android:paddingBottom="10dp"
+          />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,2416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/loginApp">
+
+    <fragment
+        android:id="@+id/loginApp"
+        android:name="n.com.mantenimientoelectrico.view.loginApp"
+        android:label="login_app"
+        tools:layout="@layout/login_app" >
+        <action
+            android:id="@+id/action_loginApp_to_mantenimiento_electrico"
+            app:destination="@id/mantenimiento_electrico" />
+    </fragment>
+    <fragment
+        android:id="@+id/mantenimiento_electrico"
+        android:name="n.com.mantenimientoelectrico.view.mantenimiento_electrico"
+        android:label="mantenimiento_electrico"
+        tools:layout="@layout/mantenimiento_electrico" >
+        <action
+            android:id="@+id/action_mantenimiento_electrico_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+    </fragment>
+    <fragment
+        android:id="@+id/recinto_de_escobillas_8000h"
+        android:name="n.com.mantenimientoelectrico.view.recinto_de_escobillas_8000h"
+        android:label="recinto_de_escobillas_8000h"
+        tools:layout="@layout/recinto_de_escobillas_8000h" >
+        <action
+            android:id="@+id/action_recinto_de_escobillas_8000h_to_recinto_de_escobillas_menu"
+            app:destination="@id/recinto_de_escobillas_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/recinto_de_escobillas_menu"
+        android:name="n.com.mantenimientoelectrico.view.recinto_de_escobillas_menu"
+        android:label="recinto_de_escobillas_menu"
+        tools:layout="@layout/recinto_de_escobillas_menu" >
+        <action
+            android:id="@+id/action_recinto_de_escobillas_menu_to_recinto_de_escobillas_aviso"
+            app:destination="@id/recinto_de_escobillas_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/recinto_de_escobillas_aviso"
+        android:name="n.com.mantenimientoelectrico.view.recinto_de_escobillas_aviso"
+        android:label="recinto_de_escobillas_aviso"
+        tools:layout="@layout/recinto_de_escobillas_aviso" >
+        <action
+            android:id="@+id/action_recinto_de_escobillas_aviso_to_recinto_de_escobillas_reglas_de_oro"
+            app:destination="@id/recinto_de_escobillas_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/recinto_de_escobillas_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.recinto_de_escobillas_reglas_de_oro"
+        android:label="recinto_de_escobillas_reglas_de_oro"
+        tools:layout="@layout/recinto_de_escobillas_reglas_de_oro" >
+        <action
+            android:id="@+id/action_recinto_de_escobillas_reglas_de_oro_to_recinto_de_escobillas_equipos"
+            app:destination="@id/recinto_de_escobillas_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/recinto_de_escobillas_equipos"
+        android:name="n.com.mantenimientoelectrico.view.recinto_de_escobillas_equipos"
+        android:label="recinto_de_escobillas_equipos" >
+        <action
+            android:id="@+id/action_recinto_de_escobillas_equipos_to_anillos_rozantes_ingresar_datos"
+            app:destination="@id/anillos_rozantes_ingresar_datos" />
+        <action
+            android:id="@+id/action_recinto_de_escobillas_equipos_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_ingresar_datos"
+        android:label="anillos_rozantes_ingresar_datos"
+        tools:layout="@layout/anillos_rozantes_ingresar_datos" >
+        <action
+            android:id="@+id/action_anillos_rozantes_ingresar_datos_to_anillos_rozantes_actividad_2"
+            app:destination="@id/anillos_rozantes_actividad_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_1"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_1"
+        android:label="anillos_rozantes_actividad_1"
+        tools:layout="@layout/anillos_rozantes_actividad_1" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_1_to_anillos_rozantes_actividad_3"
+            app:destination="@id/anillos_rozantes_actividad_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_2"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_2"
+        android:label="anillos_rozantes_actividad_2"
+        tools:layout="@layout/anillos_rozantes_actividad_2" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_2_to_anillos_rozantes_actividad_1"
+            app:destination="@id/anillos_rozantes_actividad_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_3"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_3"
+        android:label="anillos_rozantes_actividad_3"
+        tools:layout="@layout/anillos_rozantes_actividad_3" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_3_to_anillos_rozantes_actividad_4"
+            app:destination="@id/anillos_rozantes_actividad_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_4"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_4"
+        android:label="anillos_rozantes_actividad_4"
+        tools:layout="@layout/anillos_rozantes_actividad_4" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_4_to_anillos_rozantes_actividad_5"
+            app:destination="@id/anillos_rozantes_actividad_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_5"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_5"
+        android:label="anillos_rozantes_actividad_5"
+        tools:layout="@layout/anillos_rozantes_actividad_5" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_5_to_anillos_rozantes_actividad_6"
+            app:destination="@id/anillos_rozantes_actividad_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_6"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_6"
+        android:label="anillos_rozantes_actividad_6"
+        tools:layout="@layout/anillos_rozantes_actividad_6" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_6_to_anillos_rozantes_actividad_7"
+            app:destination="@id/anillos_rozantes_actividad_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_7"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_7"
+        android:label="anillos_rozantes_actividad_7" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_7_to_anillos_rozantes_actividad_8"
+            app:destination="@id/anillos_rozantes_actividad_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_actividad_8"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_actividad_8"
+        android:label="anillos_rozantes_actividad_8"
+        tools:layout="@layout/anillos_rozantes_actividad_8" >
+        <action
+            android:id="@+id/action_anillos_rozantes_actividad_8_to_anillos_rozantes_reporte"
+            app:destination="@id/anillos_rozantes_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/anillos_rozantes_reporte"
+        android:name="n.com.mantenimientoelectrico.view.anillos_rozantes_reporte"
+        android:label="anillos_rozantes_reporte" >
+        <action
+            android:id="@+id/action_anillos_rozantes_reporte_to_recinto_de_escobillas_equipos"
+            app:destination="@id/recinto_de_escobillas_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/eleccion_de_sistemas"
+        android:name="n.com.mantenimientoelectrico.view.eleccion_de_sistemas"
+        android:label="eleccion_de_sistemas" >
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_recinto_de_escobillas_8000h"
+            app:destination="@id/recinto_de_escobillas_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_generador_8000h"
+            app:destination="@id/generador_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_equipo_sobre_tension_8000h"
+            app:destination="@id/equipo_sobre_tension_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_barras_principales_8000h"
+            app:destination="@id/barras_principales_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_alta_presion_8000h"
+            app:destination="@id/alta_presion_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_valvula_principal_8000h"
+            app:destination="@id/valvula_principal_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_sistema_de_frenado_8000h"
+            app:destination="@id/sistema_de_frenado_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_panel_instrumentos_8000h"
+            app:destination="@id/panel_instrumentos_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_transformador_principal_8000h"
+            app:destination="@id/transformador_principal_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_tablero_de_control_unidad_8000h"
+            app:destination="@id/tablero_de_control_unidad_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_trafo_auxiliares_8000h"
+            app:destination="@id/trafo_auxiliares_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_sis_agua_enfriamiento_8000h"
+            app:destination="@id/sis_agua_enfriamiento_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_trafo_excitacion_8000h"
+            app:destination="@id/trafo_excitacion_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_regulacion_8000h"
+            app:destination="@id/regulacion_8000h" />
+        <action
+            android:id="@+id/action_eleccion_de_sistemas_to_ventilacion_8000h"
+            app:destination="@id/ventilacion_8000h" />
+    </fragment>
+    <fragment
+        android:id="@+id/generador_8000h"
+        android:name="n.com.mantenimientoelectrico.view.generador_8000h"
+        android:label="generador_8000h"
+        tools:layout="@layout/generador_8000h" >
+        <action
+            android:id="@+id/action_generador_8000h_to_generador_menu"
+            app:destination="@id/generador_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/generador_menu"
+        android:name="n.com.mantenimientoelectrico.view.generador_menu"
+        android:label="generador_menu"
+        tools:layout="@layout/generador_menu" >
+        <action
+            android:id="@+id/action_generador_menu_to_generador_aviso"
+            app:destination="@id/generador_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/generador_aviso"
+        android:name="n.com.mantenimientoelectrico.view.generador_aviso"
+        android:label="generador_aviso"
+        tools:layout="@layout/generador_aviso" >
+        <action
+            android:id="@+id/action_generador_aviso_to_generador_reglas_de_oro"
+            app:destination="@id/generador_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/generador_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.generador_reglas_de_oro"
+        android:label="generador_reglas_de_oro"
+        tools:layout="@layout/generador_reglas_de_oro" >
+        <action
+            android:id="@+id/action_generador_reglas_de_oro_to_generador_equipos"
+            app:destination="@id/generador_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/generador_equipos"
+        android:name="n.com.mantenimientoelectrico.view.generador_equipos"
+        android:label="generador_equipos"
+        tools:layout="@layout/generador_equipos" >
+        <action
+            android:id="@+id/action_generador_equipos_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+        <action
+            android:id="@+id/action_generador_equipos_to_estator_ingresar_datos"
+            app:destination="@id/estator_ingresar_datos" />
+        <action
+            android:id="@+id/action_generador_equipos_to_eleccion_de_sistemas2"
+            app:destination="@id/eleccion_de_sistemas" />
+        <action
+            android:id="@+id/action_generador_equipos_to_rotor_ingresar_datos"
+            app:destination="@id/rotor_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.estator_ingresar_datos"
+        android:label="estator_ingresar_datos"
+        tools:layout="@layout/estator_ingresar_datos" >
+        <action
+            android:id="@+id/action_estator_ingresar_datos_to_estator_actividad_1"
+            app:destination="@id/estator_actividad_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_1"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_1"
+        android:label="estator_actividad_1"
+        tools:layout="@layout/estator_actividad_1" >
+        <action
+            android:id="@+id/action_estator_actividad_1_to_estator_actividad_2"
+            app:destination="@id/estator_actividad_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_2"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_2"
+        android:label="estator_actividad_2"
+        tools:layout="@layout/estator_actividad_2" >
+        <action
+            android:id="@+id/action_estator_actividad_2_to_estator_actividad_3"
+            app:destination="@id/estator_actividad_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_3"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_3"
+        android:label="estator_actividad_3"
+        tools:layout="@layout/estator_actividad_3" >
+        <action
+            android:id="@+id/action_estator_actividad_3_to_estator_actividad_4"
+            app:destination="@id/estator_actividad_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_4"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_4"
+        android:label="estator_actividad_4"
+        tools:layout="@layout/estator_actividad_4" >
+        <action
+            android:id="@+id/action_estator_actividad_4_to_estator_actividad_5"
+            app:destination="@id/estator_actividad_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_5"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_5"
+        android:label="estator_actividad_5"
+        tools:layout="@layout/estator_actividad_5" >
+        <action
+            android:id="@+id/action_estator_actividad_5_to_estator_actividad_6"
+            app:destination="@id/estator_actividad_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_6"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_6"
+        android:label="estator_actividad_6"
+        tools:layout="@layout/estator_actividad_6" >
+        <action
+            android:id="@+id/action_estator_actividad_6_to_estator_actividad_7"
+            app:destination="@id/estator_actividad_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_7"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_7"
+        android:label="estator_actividad_7"
+        tools:layout="@layout/estator_actividad_7" >
+        <action
+            android:id="@+id/action_estator_actividad_7_to_estator_actividad_8"
+            app:destination="@id/estator_actividad_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_8"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_8"
+        android:label="estator_actividad_8"
+        tools:layout="@layout/estator_actividad_8" >
+        <action
+            android:id="@+id/action_estator_actividad_8_to_estator_actividad_9"
+            app:destination="@id/estator_actividad_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_9"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_9"
+        android:label="estator_actividad_9"
+        tools:layout="@layout/estator_actividad_9" >
+        <action
+            android:id="@+id/action_estator_actividad_9_to_estator_actividad_10"
+            app:destination="@id/estator_actividad_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_10"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_10"
+        android:label="estator_actividad_10"
+        tools:layout="@layout/estator_actividad_10" >
+        <action
+            android:id="@+id/action_estator_actividad_10_to_estator_actividad_11"
+            app:destination="@id/estator_actividad_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_11"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_11"
+        android:label="estator_actividad_11"
+        tools:layout="@layout/estator_actividad_11" >
+        <action
+            android:id="@+id/action_estator_actividad_11_to_estator_actividad_12"
+            app:destination="@id/estator_actividad_12" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_actividad_12"
+        android:name="n.com.mantenimientoelectrico.view.estator_actividad_12"
+        android:label="estator_actividad_12"
+        tools:layout="@layout/estator_actividad_12" >
+        <action
+            android:id="@+id/action_estator_actividad_12_to_estator_reporte"
+            app:destination="@id/estator_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/estator_reporte"
+        android:name="n.com.mantenimientoelectrico.view.estator_reporte"
+        android:label="estator_reporte" >
+        <action
+            android:id="@+id/action_estator_reporte_to_generador_equipos"
+            app:destination="@id/generador_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.rotor_ingresar_datos"
+        android:label="rotor_ingresar_datos"
+        tools:layout="@layout/rotor_ingresar_datos" >
+        <action
+            android:id="@+id/action_rotor_ingresar_datos_to_rotor_actividad_1"
+            app:destination="@id/rotor_actividad_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_1"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_1"
+        android:label="rotor_actividad_1"
+        tools:layout="@layout/rotor_actividad_1" >
+        <action
+            android:id="@+id/action_rotor_actividad_1_to_rotor_actividad_2"
+            app:destination="@id/rotor_actividad_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_2"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_2"
+        android:label="rotor_actividad_2"
+        tools:layout="@layout/rotor_actividad_2" >
+        <action
+            android:id="@+id/action_rotor_actividad_2_to_rotor_actividad_3"
+            app:destination="@id/rotor_actividad_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_3"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_3"
+        android:label="rotor_actividad_3"
+        tools:layout="@layout/rotor_actividad_3" >
+        <action
+            android:id="@+id/action_rotor_actividad_3_to_rotor_actividad_4"
+            app:destination="@id/rotor_actividad_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_4"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_4"
+        android:label="rotor_actividad_4"
+        tools:layout="@layout/rotor_actividad_4" >
+        <action
+            android:id="@+id/action_rotor_actividad_4_to_rotor_actividad_5"
+            app:destination="@id/rotor_actividad_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_5"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_5"
+        android:label="rotor_actividad_5"
+        tools:layout="@layout/rotor_actividad_5" >
+        <action
+            android:id="@+id/action_rotor_actividad_5_to_rotor_actividad_6"
+            app:destination="@id/rotor_actividad_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_6"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_6"
+        android:label="rotor_actividad_6"
+        tools:layout="@layout/rotor_actividad_6" >
+        <action
+            android:id="@+id/action_rotor_actividad_6_to_rotor_actividad_7"
+            app:destination="@id/rotor_actividad_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_7"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_7"
+        android:label="rotor_actividad_7"
+        tools:layout="@layout/rotor_actividad_7" >
+        <action
+            android:id="@+id/action_rotor_actividad_7_to_rotor_actividad_8"
+            app:destination="@id/rotor_actividad_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_8"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_8"
+        android:label="rotor_actividad_8"
+        tools:layout="@layout/rotor_actividad_8" >
+        <action
+            android:id="@+id/action_rotor_actividad_8_to_rotor_actividad_9"
+            app:destination="@id/rotor_actividad_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_actividad_9"
+        android:name="n.com.mantenimientoelectrico.view.rotor_actividad_9"
+        android:label="rotor_actividad_9"
+        tools:layout="@layout/rotor_actividad_9" >
+        <action
+            android:id="@+id/action_rotor_actividad_9_to_rotor_reporte"
+            app:destination="@id/rotor_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotor_reporte"
+        android:name="n.com.mantenimientoelectrico.view.rotor_reporte"
+        android:label="rotor_reporte" >
+        <action
+            android:id="@+id/action_rotor_reporte_to_generador_equipos"
+            app:destination="@id/generador_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_puesta_tierra_8000h"
+        android:name="n.com.mantenimientoelectrico.view.equipo_puesta_tierra_8000h"
+        android:label="equipo_puesta_tierra_8000h"
+        tools:layout="@layout/equipo_puesta_tierra_8000h" >
+        <action
+            android:id="@+id/action_equipo_puesta_tierra_8000h_to_equipo_puesta_tierra_menu"
+            app:destination="@id/equipo_puesta_tierra_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_puesta_tierra_menu"
+        android:name="n.com.mantenimientoelectrico.view.equipo_puesta_tierra_menu"
+        android:label="equipo_puesta_tierra_menu"
+        tools:layout="@layout/equipo_puesta_tierra_menu" >
+        <action
+            android:id="@+id/action_equipo_puesta_tierra_menu_to_equipo_puesta_tierra_aviso"
+            app:destination="@id/equipo_puesta_tierra_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_puesta_tierra_aviso"
+        android:name="n.com.mantenimientoelectrico.view.equipo_puesta_tierra_aviso"
+        android:label="equipo_puesta_tierra_aviso" >
+        <action
+            android:id="@+id/action_equipo_puesta_tierra_aviso_to_equipo_puesta_tierra_reglas_de_oro"
+            app:destination="@id/equipo_puesta_tierra_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_puesta_tierra_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.equipo_puesta_tierra_reglas_de_oro"
+        android:label="equipo_puesta_tierra_reglas_de_oro"
+        tools:layout="@layout/equipo_puesta_tierra_reglas_de_oro" >
+        <action
+            android:id="@+id/action_equipo_puesta_tierra_reglas_de_oro_to_equipo_puesta_tierra_equipos"
+            app:destination="@id/equipo_puesta_tierra_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_puesta_tierra_equipos"
+        android:name="n.com.mantenimientoelectrico.view.equipo_puesta_tierra_equipos"
+        android:label="equipo_puesta_tierra_equipos"
+        tools:layout="@layout/equipo_puesta_tierra_equipos" >
+        <action
+            android:id="@+id/action_equipo_puesta_tierra_equipos_to_trafo_distribucion_ingresar_datos"
+            app:destination="@id/trafo_distribucion_ingresar_datos" />
+        <action
+            android:id="@+id/action_equipo_puesta_tierra_equipos_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_sobre_tension_8000h"
+        android:name="n.com.mantenimientoelectrico.view.equipo_sobre_tension_8000h"
+        android:label="equipo_sobre_tension_8000h" >
+        <action
+            android:id="@+id/action_equipo_sobre_tension_8000h_to_equipo_sobre_tension_menu"
+            app:destination="@id/equipo_sobre_tension_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_sobre_tension_menu"
+        android:name="n.com.mantenimientoelectrico.view.equipo_sobre_tension_menu"
+        android:label="equipo_sobre_tension_menu"
+        tools:layout="@layout/equipo_sobre_tension_menu" >
+        <action
+            android:id="@+id/action_equipo_sobre_tension_menu_to_equipo_sobre_tension_aviso"
+            app:destination="@id/equipo_sobre_tension_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_sobre_tension_aviso"
+        android:name="n.com.mantenimientoelectrico.view.equipo_sobre_tension_aviso"
+        android:label="equipo_sobre_tension_aviso"
+        tools:layout="@layout/equipo_sobre_tension_aviso" >
+        <action
+            android:id="@+id/action_equipo_sobre_tension_aviso_to_equipo_sobre_tension_reglas_de_oro"
+            app:destination="@id/equipo_sobre_tension_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_sobre_tension_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.equipo_sobre_tension_reglas_de_oro"
+        android:label="equipo_sobre_tension_reglas_de_oro"
+        tools:layout="@layout/equipo_sobre_tension_reglas_de_oro" >
+        <action
+            android:id="@+id/action_equipo_sobre_tension_reglas_de_oro_to_equipo_sobre_tension_equipos"
+            app:destination="@id/equipo_sobre_tension_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipo_sobre_tension_equipos"
+        android:name="n.com.mantenimientoelectrico.view.equipo_sobre_tension_equipos"
+        android:label="equipo_sobre_tension_equipos" >
+        <action
+            android:id="@+id/action_equipo_sobre_tension_equipos_to_descargador_ingresar_datos"
+            app:destination="@id/descargador_ingresar_datos" />
+        <action
+            android:id="@+id/action_equipo_sobre_tension_equipos_to_descargador_ingresar_datos2"
+            app:destination="@id/descargador_ingresar_datos" />
+        <action
+            android:id="@+id/action_equipo_sobre_tension_equipos_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+        <action
+            android:id="@+id/action_equipo_sobre_tension_equipos_to_trafo_potencial_ingresar_datos"
+            app:destination="@id/trafo_potencial_ingresar_datos" />
+        <action
+            android:id="@+id/action_equipo_sobre_tension_equipos_to_capacitor_ingresar_datos"
+            app:destination="@id/capacitor_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_8000h"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_8000h"
+        android:label="barras_principales_8000h"
+        tools:layout="@layout/barras_principales_8000h" >
+        <action
+            android:id="@+id/action_barras_principales_8000h_to_barras_principales_menu"
+            app:destination="@id/barras_principales_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_menu"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_menu"
+        android:label="barras_principales_menu"
+        tools:layout="@layout/barras_principales_menu" >
+        <action
+            android:id="@+id/action_barras_principales_menu_to_barras_principales_aviso"
+            app:destination="@id/barras_principales_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_aviso"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_aviso"
+        android:label="barras_principales_aviso"
+        tools:layout="@layout/barras_principales_aviso" >
+        <action
+            android:id="@+id/action_barras_principales_aviso_to_barras_principales_reglas_de_oro"
+            app:destination="@id/barras_principales_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_reglas_de_oro"
+        android:label="barras_principales_reglas_de_oro"
+        tools:layout="@layout/barras_principales_reglas_de_oro" >
+        <action
+            android:id="@+id/action_barras_principales_reglas_de_oro_to_barras_principales_equipos"
+            app:destination="@id/barras_principales_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_equipos"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_equipos"
+        android:label="barras_principales_equipos"
+        tools:layout="@layout/barras_principales_equipos" >
+        <action
+            android:id="@+id/action_barras_principales_equipos_to_barras_principales_ingresar_datos"
+            app:destination="@id/barras_principales_ingresar_datos" />
+        <action
+            android:id="@+id/action_barras_principales_equipos_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+    </fragment>
+    <fragment
+        android:id="@+id/alta_presion_8000h"
+        android:name="n.com.mantenimientoelectrico.view.alta_presion_8000h"
+        android:label="alta_presion_8000h"
+        tools:layout="@layout/alta_presion_8000h" >
+        <action
+            android:id="@+id/action_alta_presion_8000h_to_alta_presion_menu"
+            app:destination="@id/alta_presion_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/alta_presion_menu"
+        android:name="n.com.mantenimientoelectrico.view.alta_presion_menu"
+        android:label="alta_presion_menu"
+        tools:layout="@layout/alta_presion_menu" >
+        <action
+            android:id="@+id/action_alta_presion_menu_to_alta_presion_aviso"
+            app:destination="@id/alta_presion_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/alta_presion_aviso"
+        android:name="n.com.mantenimientoelectrico.view.alta_presion_aviso"
+        android:label="alta_presion_aviso"
+        tools:layout="@layout/alta_presion_aviso" >
+        <action
+            android:id="@+id/action_alta_presion_aviso_to_alta_presion_reglas_de_oro"
+            app:destination="@id/alta_presion_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/alta_presion_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.alta_presion_reglas_de_oro"
+        android:label="alta_presion_reglas_de_oro"
+        tools:layout="@layout/alta_presion_reglas_de_oro" >
+        <action
+            android:id="@+id/action_alta_presion_reglas_de_oro_to_alta_presion_equipos"
+            app:destination="@id/alta_presion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/alta_presion_equipos"
+        android:name="n.com.mantenimientoelectrico.view.alta_presion_equipos"
+        android:label="alta_presion_equipos"
+        tools:layout="@layout/alta_presion_equipos" >
+        <action
+            android:id="@+id/action_alta_presion_equipos_to_motor_ingresar_datos"
+            app:destination="@id/motor_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/valvula_principal_8000h"
+        android:name="n.com.mantenimientoelectrico.view.valvula_principal_8000h"
+        android:label="valvula_principal_8000h"
+        tools:layout="@layout/valvula_principal_8000h" >
+        <action
+            android:id="@+id/action_valvula_principal_8000h_to_valvula_principal_menu"
+            app:destination="@id/valvula_principal_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/valvula_principal_menu"
+        android:name="n.com.mantenimientoelectrico.view.valvula_principal_menu"
+        android:label="valvula_principal_menu"
+        tools:layout="@layout/valvula_principal_menu" >
+        <action
+            android:id="@+id/action_valvula_principal_menu_to_valvula_principal_aviso"
+            app:destination="@id/valvula_principal_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/valvula_principal_aviso"
+        android:name="n.com.mantenimientoelectrico.view.valvula_principal_aviso"
+        android:label="valvula_principal_aviso"
+        tools:layout="@layout/valvula_principal_aviso" >
+        <action
+            android:id="@+id/action_valvula_principal_aviso_to_valvula_principal_reglas_de_oro"
+            app:destination="@id/valvula_principal_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/valvula_principal_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.valvula_principal_reglas_de_oro"
+        android:label="valvula_principal_reglas_de_oro" >
+        <action
+            android:id="@+id/action_valvula_principal_reglas_de_oro_to_valvula_principal_equipos"
+            app:destination="@id/valvula_principal_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/valvula_principal_equipos"
+        android:name="n.com.mantenimientoelectrico.view.valvula_principal_equipos"
+        android:label="valvula_principal_equipos"
+        tools:layout="@layout/valvula_principal_equipos" >
+        <action
+            android:id="@+id/action_valvula_principal_equipos_to_tab_control_micros_ingresar_datos"
+            app:destination="@id/tab_control_micros_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/sistema_de_frenado_8000h"
+        android:name="n.com.mantenimientoelectrico.view.sistema_de_frenado_8000h"
+        android:label="sistema_de_frenado_8000h"
+        tools:layout="@layout/sistema_de_frenado_8000h" />
+    <fragment
+        android:id="@+id/sistema_de_frenado_menu"
+        android:name="n.com.mantenimientoelectrico.view.sistema_de_frenado_menu"
+        android:label="sistema_de_frenado_menu"
+        tools:layout="@layout/sistema_de_frenado_menu" />
+    <fragment
+        android:id="@+id/sistema_de_frenado_aviso"
+        android:name="n.com.mantenimientoelectrico.view.sistema_de_frenado_aviso"
+        android:label="sistema_de_frenado_aviso"
+        tools:layout="@layout/sistema_de_frenado_aviso" />
+    <fragment
+        android:id="@+id/sistema_de_frenado_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.sistema_de_frenado_reglas_de_oro"
+        android:label="sistema_de_frenado_reglas_de_oro"
+        tools:layout="@layout/sistema_de_frenado_reglas_de_oro" />
+    <fragment
+        android:id="@+id/sistema_de_frenado_equipos"
+        android:name="n.com.mantenimientoelectrico.view.sistema_de_frenado_equipos"
+        android:label="sistema_de_frenado_equipos"
+        tools:layout="@layout/sistema_de_frenado_equipos" >
+        <action
+            android:id="@+id/action_sistema_de_frenado_equipos_to_tab_control_termico_micro_ingresar_datos"
+            app:destination="@id/tab_control_termico_micro_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/panel_instrumentos_8000h"
+        android:name="n.com.mantenimientoelectrico.view.panel_instrumentos_8000h"
+        android:label="panel_instrumentos_8000h"
+        tools:layout="@layout/panel_instrumentos_8000h" />
+    <fragment
+        android:id="@+id/panel_instrumentos_menu"
+        android:name="n.com.mantenimientoelectrico.view.panel_instrumentos_menu"
+        android:label="panel_instrumentos_menu"
+        tools:layout="@layout/panel_instrumentos_menu" />
+    <fragment
+        android:id="@+id/panel_instrumentos_aviso"
+        android:name="n.com.mantenimientoelectrico.view.panel_instrumentos_aviso"
+        android:label="panel_instrumentos_aviso"
+        tools:layout="@layout/panel_instrumentos_aviso" />
+    <fragment
+        android:id="@+id/panel_instrumentos_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.panel_instrumentos_reglas_de_oro"
+        android:label="panel_instrumentos_reglas_de_oro"
+        tools:layout="@layout/panel_instrumentos_reglas_de_oro" />
+    <fragment
+        android:id="@+id/panel_instrumentos_equipos"
+        android:name="n.com.mantenimientoelectrico.view.panel_instrumentos_equipos"
+        android:label="panel_instrumentos_equipos"
+        tools:layout="@layout/panel_instrumentos_equipos" >
+        <action
+            android:id="@+id/action_panel_instrumentos_equipos_to_tab_control_senalizacion_ingresar_datos"
+            app:destination="@id/tab_control_senalizacion_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/transformador_principal_8000h"
+        android:name="n.com.mantenimientoelectrico.view.transformador_principal_8000h"
+        android:label="transformador_principal_8000h"
+        tools:layout="@layout/transformador_principal_8000h" />
+    <fragment
+        android:id="@+id/transformador_principal_menu"
+        android:name="n.com.mantenimientoelectrico.view.transformador_principal_menu"
+        android:label="transformador_principal_menu"
+        tools:layout="@layout/transformador_principal_menu" />
+    <fragment
+        android:id="@+id/transformador_principal_aviso"
+        android:name="n.com.mantenimientoelectrico.view.transformador_principal_aviso"
+        android:label="transformador_principal_aviso"
+        tools:layout="@layout/transformador_principal_aviso" />
+    <fragment
+        android:id="@+id/transformador_principal_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.transformador_principal_reglas_de_oro"
+        android:label="transformador_principal_reglas_de_oro"
+        tools:layout="@layout/transformador_principal_reglas_de_oro" />
+    <fragment
+        android:id="@+id/transformador_principal_equipos"
+        android:name="n.com.mantenimientoelectrico.view.transformador_principal_equipos"
+        android:label="transformador_principal_equipos"
+        tools:layout="@layout/transformador_principal_equipos" >
+        <action
+            android:id="@+id/action_transformador_principal_equipos_to_trafo_potencia_ingresar_datos"
+            app:destination="@id/trafo_potencia_ingresar_datos" />
+        <action
+            android:id="@+id/action_transformador_principal_equipos_to_eleccion_de_sistemas"
+            app:destination="@id/eleccion_de_sistemas" />
+    </fragment>
+    <fragment
+        android:id="@+id/tablero_de_control_unidad_8000h"
+        android:name="n.com.mantenimientoelectrico.view.tablero_de_control_unidad_8000h"
+        android:label="tablero_de_control_unidad_8000h"
+        tools:layout="@layout/tablero_de_control_unidad_8000h" />
+    <fragment
+        android:id="@+id/tablero_de_control_unidad_menu"
+        android:name="n.com.mantenimientoelectrico.view.tablero_de_control_unidad_menu"
+        android:label="tablero_de_control_unidad_menu"
+        tools:layout="@layout/tablero_de_control_unidad_menu" />
+    <fragment
+        android:id="@+id/tablero_de_control_unidad_aviso"
+        android:name="n.com.mantenimientoelectrico.view.tablero_de_control_unidad_aviso"
+        android:label="tablero_de_control_unidad_aviso"
+        tools:layout="@layout/tablero_de_control_unidad_aviso" />
+    <fragment
+        android:id="@+id/tablero_de_control_unidad_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.tablero_de_control_unidad_reglas_de_oro"
+        android:label="tablero_de_control_unidad_reglas_de_oro"
+        tools:layout="@layout/tablero_de_control_unidad_reglas_de_oro" />
+    <fragment
+        android:id="@+id/tablero_de_control_unidad_equipos"
+        android:name="n.com.mantenimientoelectrico.view.tablero_de_control_unidad_equipos"
+        android:label="tablero_de_control_unidad_equipos"
+        tools:layout="@layout/tablero_de_control_unidad_equipos" >
+        <action
+            android:id="@+id/action_tablero_de_control_unidad_equipos_to_tab_control_senalizacion_ingresar_datos"
+            app:destination="@id/tab_control_senalizacion_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_auxiliares_8000h"
+        android:name="n.com.mantenimientoelectrico.view.trafo_auxiliares_8000h"
+        android:label="trafo_auxiliares_8000h"
+        tools:layout="@layout/trafo_auxiliares_8000h" />
+    <fragment
+        android:id="@+id/trafo_auxiliares_menu"
+        android:name="n.com.mantenimientoelectrico.view.trafo_auxiliares_menu"
+        android:label="trafo_auxiliares_menu"
+        tools:layout="@layout/trafo_auxiliares_menu" />
+    <fragment
+        android:id="@+id/trafo_auxiliares_aviso"
+        android:name="n.com.mantenimientoelectrico.view.trafo_auxiliares_aviso"
+        android:label="trafo_auxiliares_aviso"
+        tools:layout="@layout/trafo_auxiliares_aviso" />
+    <fragment
+        android:id="@+id/trafo_auxiliares_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.trafo_auxiliares_reglas_de_oro"
+        android:label="trafo_auxiliares_reglas_de_oro"
+        tools:layout="@layout/trafo_auxiliares_reglas_de_oro" />
+    <fragment
+        android:id="@+id/trafo_auxiliares_equipos"
+        android:name="n.com.mantenimientoelectrico.view.trafo_auxiliares_equipos"
+        android:label="trafo_auxiliares_equipos"
+        tools:layout="@layout/trafo_auxiliares_equipos" >
+        <action
+            android:id="@+id/action_trafo_auxiliares_equipos_to_trafo_distribucion_exci_ingresar_datos"
+            app:destination="@id/trafo_distribucion_exci_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/sis_agua_enfriamiento_8000h"
+        android:name="n.com.mantenimientoelectrico.view.sis_agua_enfriamiento_8000h"
+        android:label="sis_agua_enfriamiento_8000h"
+        tools:layout="@layout/sis_agua_enfriamiento_8000h" >
+        <action
+            android:id="@+id/action_sis_agua_enfriamiento_8000h_to_sis_agua_enfriamiento_menu"
+            app:destination="@id/sis_agua_enfriamiento_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/sis_agua_enfriamiento_menu"
+        android:name="n.com.mantenimientoelectrico.view.sis_agua_enfriamiento_menu"
+        android:label="sis_agua_enfriamiento_menu"
+        tools:layout="@layout/sis_agua_enfriamiento_menu" >
+        <action
+            android:id="@+id/action_sis_agua_enfriamiento_menu_to_sis_agua_enfriamiento_aviso"
+            app:destination="@id/sis_agua_enfriamiento_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/sis_agua_enfriamiento_aviso"
+        android:name="n.com.mantenimientoelectrico.view.sis_agua_enfriamiento_aviso"
+        android:label="sis_agua_enfriamiento_aviso"
+        tools:layout="@layout/sis_agua_enfriamiento_aviso" >
+        <action
+            android:id="@+id/action_sis_agua_enfriamiento_aviso_to_sis_agua_enfriamiento_reglas_de_oro"
+            app:destination="@id/sis_agua_enfriamiento_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/sis_agua_enfriamiento_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.sis_agua_enfriamiento_reglas_de_oro"
+        android:label="sis_agua_enfriamiento_reglas_de_oro"
+        tools:layout="@layout/sis_agua_enfriamiento_reglas_de_oro" >
+        <action
+            android:id="@+id/action_sis_agua_enfriamiento_reglas_de_oro_to_sis_agua_enfriamiento_equipos"
+            app:destination="@id/sis_agua_enfriamiento_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/sis_agua_enfriamiento_equipos"
+        android:name="n.com.mantenimientoelectrico.view.sis_agua_enfriamiento_equipos"
+        android:label="sis_agua_enfriamiento_equipos"
+        tools:layout="@layout/sis_agua_enfriamiento_equipos" >
+        <action
+            android:id="@+id/action_sis_agua_enfriamiento_equipos_to_motor_ingresar_datos"
+            app:destination="@id/motor_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_excitacion_8000h"
+        android:name="n.com.mantenimientoelectrico.view.trafo_excitacion_8000h"
+        android:label="trafo_excitacion_8000h"
+        tools:layout="@layout/trafo_excitacion_8000h" >
+        <action
+            android:id="@+id/action_trafo_excitacion_8000h_to_trafo_excitacion_menu"
+            app:destination="@id/trafo_excitacion_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_excitacion_equipos"
+        android:name="n.com.mantenimientoelectrico.view.trafo_excitacion_equipos"
+        android:label="trafo_excitacion_equipos"
+        tools:layout="@layout/trafo_excitacion_equipos" >
+        <action
+            android:id="@+id/action_trafo_excitacion_equipos_to_trafo_distribucion_exci_ingresar_datos"
+            app:destination="@id/trafo_distribucion_exci_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_excitacion_menu"
+        android:name="n.com.mantenimientoelectrico.view.trafo_excitacion_menu"
+        android:label="trafo_excitacion_menu"
+        tools:layout="@layout/trafo_excitacion_menu" >
+        <action
+            android:id="@+id/action_trafo_excitacion_menu_to_trafo_excitacion_aviso"
+            app:destination="@id/trafo_excitacion_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_excitacion_aviso"
+        android:name="n.com.mantenimientoelectrico.view.trafo_excitacion_aviso"
+        android:label="trafo_excitacion_aviso"
+        tools:layout="@layout/trafo_excitacion_aviso" >
+        <action
+            android:id="@+id/action_trafo_excitacion_aviso_to_trafo_excitacion_reglas_de_oro"
+            app:destination="@id/trafo_excitacion_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_excitacion_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.trafo_excitacion_reglas_de_oro"
+        android:label="trafo_excitacion_reglas_de_oro"
+        tools:layout="@layout/trafo_excitacion_reglas_de_oro" >
+        <action
+            android:id="@+id/action_trafo_excitacion_reglas_de_oro_to_trafo_excitacion_equipos"
+            app:destination="@id/trafo_excitacion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/regulacion_8000h"
+        android:name="n.com.mantenimientoelectrico.view.regulacion_8000h"
+        android:label="regulacion_8000h"
+        tools:layout="@layout/regulacion_8000h" >
+        <action
+            android:id="@+id/action_regulacion_8000h_to_regulacion_menu"
+            app:destination="@id/regulacion_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/regulacion_menu"
+        android:name="n.com.mantenimientoelectrico.view.regulacion_menu"
+        android:label="regulacion_menu"
+        tools:layout="@layout/regulacion_menu" >
+        <action
+            android:id="@+id/action_regulacion_menu_to_regulacion_aviso"
+            app:destination="@id/regulacion_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/regulacion_aviso"
+        android:name="n.com.mantenimientoelectrico.view.regulacion_aviso"
+        android:label="regulacion_aviso"
+        tools:layout="@layout/regulacion_aviso" >
+        <action
+            android:id="@+id/action_regulacion_aviso_to_regulacion_reglas_de_oro"
+            app:destination="@id/regulacion_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/regulacion_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.regulacion_reglas_de_oro"
+        android:label="regulacion_reglas_de_oro"
+        tools:layout="@layout/regulacion_reglas_de_oro" >
+        <action
+            android:id="@+id/action_regulacion_reglas_de_oro_to_regulacion_equipos"
+            app:destination="@id/regulacion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/regulacion_equipos"
+        android:name="n.com.mantenimientoelectrico.view.regulacion_equipos"
+        android:label="regulacion_equipos"
+        tools:layout="@layout/regulacion_equipos" >
+        <action
+            android:id="@+id/action_regulacion_equipos_to_motor_ingresar_datos"
+            app:destination="@id/motor_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventilacion_8000h"
+        android:name="n.com.mantenimientoelectrico.view.ventilacion_8000h"
+        android:label="ventilacion_8000h"
+        tools:layout="@layout/ventilacion_8000h" >
+        <action
+            android:id="@+id/action_ventilacion_8000h_to_ventilacion_menu"
+            app:destination="@id/ventilacion_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventilacion_menu"
+        android:name="n.com.mantenimientoelectrico.view.ventilacion_menu"
+        android:label="ventilacion_menu"
+        tools:layout="@layout/ventilacion_menu" >
+        <action
+            android:id="@+id/action_ventilacion_menu_to_ventilacion_aviso"
+            app:destination="@id/ventilacion_aviso" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventilacion_reglas_de_oro"
+        android:name="n.com.mantenimientoelectrico.view.ventilacion_reglas_de_oro"
+        android:label="ventilacion_reglas_de_oro"
+        tools:layout="@layout/ventilacion_reglas_de_oro" >
+        <action
+            android:id="@+id/action_ventilacion_reglas_de_oro_to_ventilacion_equipos"
+            app:destination="@id/ventilacion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventilacion_aviso"
+        android:name="n.com.mantenimientoelectrico.view.ventilacion_aviso"
+        android:label="ventilacion_aviso"
+        tools:layout="@layout/ventilacion_aviso" >
+        <action
+            android:id="@+id/action_ventilacion_aviso_to_ventilacion_reglas_de_oro"
+            app:destination="@id/ventilacion_reglas_de_oro" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventilacion_equipos"
+        android:name="n.com.mantenimientoelectrico.view.ventilacion_equipos"
+        android:label="ventilacion_equipos"
+        tools:layout="@layout/ventilacion_equipos" >
+        <action
+            android:id="@+id/action_ventilacion_equipos_to_motor_ingresar_datos"
+            app:destination="@id/motor_ingresar_datos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_ingresar_datos"
+        android:label="trafo_distribucion_ingresar_datos"
+        tools:layout="@layout/trafo_distribucion_ingresar_datos" >
+        <action
+            android:id="@+id/action_trafo_distribucion_ingresar_datos_to_trafo_distribucion_act_1"
+            app:destination="@id/trafo_distribucion_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_1"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_1"
+        android:label="trafo_distribucion_act_1"
+        tools:layout="@layout/trafo_distribucion_act_1" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_1_to_trafo_distribucion_act_2"
+            app:destination="@id/trafo_distribucion_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_2"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_2"
+        android:label="trafo_distribucion_act_2"
+        tools:layout="@layout/trafo_distribucion_act_2" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_2_to_trafo_distribucion_act_3"
+            app:destination="@id/trafo_distribucion_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_3"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_3"
+        android:label="trafo_distribucion_act_3"
+        tools:layout="@layout/trafo_distribucion_act_3" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_3_to_trafo_distribucion_act_4"
+            app:destination="@id/trafo_distribucion_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_4"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_4"
+        android:label="trafo_distribucion_act_4"
+        tools:layout="@layout/trafo_distribucion_act_4" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_4_to_trafo_distribucion_act_5"
+            app:destination="@id/trafo_distribucion_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_5"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_5"
+        android:label="trafo_distribucion_act_5"
+        tools:layout="@layout/trafo_distribucion_act_5" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_5_to_trafo_distribucion_act_6"
+            app:destination="@id/trafo_distribucion_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_6"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_6"
+        android:label="trafo_distribucion_act_6"
+        tools:layout="@layout/trafo_distribucion_act_6" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_6_to_trafo_distribucion_act_7"
+            app:destination="@id/trafo_distribucion_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_7"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_7"
+        android:label="trafo_distribucion_act_7"
+        tools:layout="@layout/trafo_distribucion_act_7" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_7_to_trafo_distribucion_act_8"
+            app:destination="@id/trafo_distribucion_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_8"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_8"
+        android:label="trafo_distribucion_act_8"
+        tools:layout="@layout/trafo_distribucion_act_8" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_8_to_trafo_distribucion_act_9"
+            app:destination="@id/trafo_distribucion_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_9"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_9"
+        android:label="trafo_distribucion_act_9"
+        tools:layout="@layout/trafo_distribucion_act_9" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_9_to_trafo_distribucion_act_10"
+            app:destination="@id/trafo_distribucion_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_10"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_10"
+        android:label="trafo_distribucion_act_10"
+        tools:layout="@layout/trafo_distribucion_act_10" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_10_to_trafo_distribucion_act_11"
+            app:destination="@id/trafo_distribucion_act_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_11"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_11"
+        android:label="trafo_distribucion_act_11"
+        tools:layout="@layout/trafo_distribucion_act_11" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_11_to_trafo_distribucion_act_12"
+            app:destination="@id/trafo_distribucion_act_12" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_act_12"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_act_12"
+        android:label="trafo_distribucion_act_12"
+        tools:layout="@layout/trafo_distribucion_act_12" >
+        <action
+            android:id="@+id/action_trafo_distribucion_act_12_to_trafo_distribucion_reporte"
+            app:destination="@id/trafo_distribucion_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_reporte"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_reporte"
+        android:label="trafo_distribucion_reporte"
+        tools:layout="@layout/trafo_distribucion_reporte" >
+        <action
+            android:id="@+id/action_trafo_distribucion_reporte_to_equipo_puesta_tierra_equipos"
+            app:destination="@id/equipo_puesta_tierra_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/descargador_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.descargador_ingresar_datos"
+        android:label="descargador_ingresar_datos"
+        tools:layout="@layout/descargador_ingresar_datos" >
+        <action
+            android:id="@+id/action_descargador_ingresar_datos_to_descargador_act_1"
+            app:destination="@id/descargador_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/descargador_act_1"
+        android:name="n.com.mantenimientoelectrico.view.descargador_act_1"
+        android:label="descargador_act_1"
+        tools:layout="@layout/descargador_act_1" >
+        <action
+            android:id="@+id/action_descargador_act_1_to_descargador_act_2"
+            app:destination="@id/descargador_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/descargador_act_2"
+        android:name="n.com.mantenimientoelectrico.view.descargador_act_2"
+        android:label="descargador_act_2"
+        tools:layout="@layout/descargador_act_2" >
+        <action
+            android:id="@+id/action_descargador_act_2_to_descargador_act_3"
+            app:destination="@id/descargador_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/descargador_act_3"
+        android:name="n.com.mantenimientoelectrico.view.descargador_act_3"
+        android:label="descargador_act_3"
+        tools:layout="@layout/descargador_act_3" >
+        <action
+            android:id="@+id/action_descargador_act_3_to_descargador_act_4"
+            app:destination="@id/descargador_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/descargador_act_4"
+        android:name="n.com.mantenimientoelectrico.view.descargador_act_4"
+        android:label="descargador_act_4"
+        tools:layout="@layout/descargador_act_4" >
+        <action
+            android:id="@+id/action_descargador_act_4_to_descargador_reporte"
+            app:destination="@id/descargador_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/descargador_reporte"
+        android:name="n.com.mantenimientoelectrico.view.descargador_reporte"
+        android:label="descargador_reporte"
+        tools:layout="@layout/descargador_reporte" >
+        <action
+            android:id="@+id/action_descargador_reporte_to_equipo_sobre_tension_equipos"
+            app:destination="@id/equipo_sobre_tension_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_ingresar_datos"
+        android:label="trafo_potencia_ingresar_datos"
+        tools:layout="@layout/trafo_potencia_ingresar_datos" >
+        <action
+            android:id="@+id/action_trafo_potencia_ingresar_datos_to_trafo_potencia_act_1"
+            app:destination="@id/trafo_potencia_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_1"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_1"
+        android:label="trafo_potencial_act_1"
+        tools:layout="@layout/trafo_potencial_act_1" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_1_to_trafo_potencial_act_2"
+            app:destination="@id/trafo_potencial_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_2"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_2"
+        android:label="trafo_potencial_act_2"
+        tools:layout="@layout/trafo_potencial_act_2" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_2_to_trafo_potencial_act_3"
+            app:destination="@id/trafo_potencial_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_3"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_3"
+        android:label="trafo_potencial_act_3"
+        tools:layout="@layout/trafo_potencial_act_3" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_3_to_trafo_potencial_act_4"
+            app:destination="@id/trafo_potencial_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_4"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_4"
+        android:label="trafo_potencial_act_4"
+        tools:layout="@layout/trafo_potencial_act_4" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_4_to_trafo_potencial_act_5"
+            app:destination="@id/trafo_potencial_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_5"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_5"
+        android:label="trafo_potencial_act_5"
+        tools:layout="@layout/trafo_potencial_act_5" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_5_to_trafo_potencial_act_6"
+            app:destination="@id/trafo_potencial_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_6"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_6"
+        android:label="trafo_potencial_act_6"
+        tools:layout="@layout/trafo_potencial_act_6" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_6_to_trafo_potencial_act_7"
+            app:destination="@id/trafo_potencial_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_7"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_7"
+        android:label="trafo_potencial_act_7"
+        tools:layout="@layout/trafo_potencial_act_7" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_7_to_trafo_potencial_act_8"
+            app:destination="@id/trafo_potencial_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_8"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_8"
+        android:label="trafo_potencial_act_8"
+        tools:layout="@layout/trafo_potencial_act_8" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_8_to_trafo_potencial_act_9"
+            app:destination="@id/trafo_potencial_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_9"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_9"
+        android:label="trafo_potencial_act_9"
+        tools:layout="@layout/trafo_potencial_act_9" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_9_to_trafo_potencial_act_10"
+            app:destination="@id/trafo_potencial_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_10"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_10"
+        android:label="trafo_potencial_act_10"
+        tools:layout="@layout/trafo_potencial_act_10" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_10_to_trafo_potencial_act_11"
+            app:destination="@id/trafo_potencial_act_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_11"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_11"
+        android:label="trafo_potencial_act_11"
+        tools:layout="@layout/trafo_potencial_act_11" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_11_to_trafo_potencial_act_12"
+            app:destination="@id/trafo_potencial_act_12" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_act_12"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_act_12"
+        android:label="trafo_potencial_act_12"
+        tools:layout="@layout/trafo_potencial_act_12" >
+        <action
+            android:id="@+id/action_trafo_potencial_act_12_to_trafo_potencial_reporte"
+            app:destination="@id/trafo_potencial_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_reporte"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_reporte"
+        android:label="trafo_potencial_reporte"
+        tools:layout="@layout/trafo_potencial_reporte" >
+        <action
+            android:id="@+id/action_trafo_potencial_reporte_to_equipo_sobre_tension_equipos"
+            app:destination="@id/equipo_sobre_tension_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencial_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencial_ingresar_datos"
+        android:label="trafo_potencial_ingresar_datos"
+        tools:layout="@layout/trafo_potencial_ingresar_datos" >
+        <action
+            android:id="@+id/action_trafo_potencial_ingresar_datos_to_trafo_potencial_act_1"
+            app:destination="@id/trafo_potencial_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/capacitor_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.capacitor_ingresar_datos"
+        android:label="capacitor_ingresar_datos"
+        tools:layout="@layout/capacitor_ingresar_datos" >
+        <action
+            android:id="@+id/action_capacitor_ingresar_datos_to_capacitor_act_1"
+            app:destination="@id/capacitor_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/capacitor_act_1"
+        android:name="n.com.mantenimientoelectrico.view.capacitor_act_1"
+        android:label="capacitor_act_1"
+        tools:layout="@layout/capacitor_act_1" >
+        <action
+            android:id="@+id/action_capacitor_act_1_to_capacitor_act_2"
+            app:destination="@id/capacitor_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/capacitor_act_2"
+        android:name="n.com.mantenimientoelectrico.view.capacitor_act_2"
+        android:label="capacitor_act_2"
+        tools:layout="@layout/capacitor_act_2" >
+        <action
+            android:id="@+id/action_capacitor_act_2_to_capacitor_act_3"
+            app:destination="@id/capacitor_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/capacitor_act_3"
+        android:name="n.com.mantenimientoelectrico.view.capacitor_act_3"
+        android:label="capacitor_act_3"
+        tools:layout="@layout/capacitor_act_3" >
+        <action
+            android:id="@+id/action_capacitor_act_3_to_capacitor_act_4"
+            app:destination="@id/capacitor_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/capacitor_act_4"
+        android:name="n.com.mantenimientoelectrico.view.capacitor_act_4"
+        android:label="capacitor_act_4"
+        tools:layout="@layout/capacitor_act_4" >
+        <action
+            android:id="@+id/action_capacitor_act_4_to_capacitor_reporte"
+            app:destination="@id/capacitor_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/capacitor_reporte"
+        android:name="n.com.mantenimientoelectrico.view.capacitor_reporte"
+        android:label="capacitor_reporte" >
+        <action
+            android:id="@+id/action_capacitor_reporte_to_equipo_sobre_tension_equipos"
+            app:destination="@id/equipo_sobre_tension_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_ingresar_datos"
+        android:label="trafo_distribucion_exci_ingresar_datos"
+        tools:layout="@layout/trafo_distribucion_exci_ingresar_datos" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_ingresar_datos_to_trafo_distribucion_exci_act_1"
+            app:destination="@id/trafo_distribucion_exci_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_1"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_1"
+        android:label="trafo_distribucion_exci_act_1"
+        tools:layout="@layout/trafo_distribucion_exci_act_1" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_1_to_trafo_distribucion_exci_act_2"
+            app:destination="@id/trafo_distribucion_exci_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_2"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_2"
+        android:label="trafo_distribucion_exci_act_2"
+        tools:layout="@layout/trafo_distribucion_exci_act_2" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_2_to_trafo_distribucion_exci_act_3"
+            app:destination="@id/trafo_distribucion_exci_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_3"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_3"
+        android:label="trafo_distribucion_exci_act_3"
+        tools:layout="@layout/trafo_distribucion_exci_act_3" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_3_to_trafo_distribucion_exci_act_4"
+            app:destination="@id/trafo_distribucion_exci_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_4"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_4"
+        android:label="trafo_distribucion_exci_act_4"
+        tools:layout="@layout/trafo_distribucion_exci_act_4" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_4_to_trafo_distribucion_exci_act_5"
+            app:destination="@id/trafo_distribucion_exci_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_5"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_5"
+        android:label="trafo_distribucion_exci_act_5"
+        tools:layout="@layout/trafo_distribucion_exci_act_5" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_5_to_trafo_distribucion_exci_act_6"
+            app:destination="@id/trafo_distribucion_exci_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_6"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_6"
+        android:label="trafo_distribucion_exci_act_6"
+        tools:layout="@layout/trafo_distribucion_exci_act_6" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_6_to_trafo_distribucion_exci_act_7"
+            app:destination="@id/trafo_distribucion_exci_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_7"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_7"
+        android:label="trafo_distribucion_exci_act_7"
+        tools:layout="@layout/trafo_distribucion_exci_act_7" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_7_to_trafo_distribucion_exci_act_8"
+            app:destination="@id/trafo_distribucion_exci_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_act_8"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_act_8"
+        android:label="trafo_distribucion_exci_act_8"
+        tools:layout="@layout/trafo_distribucion_exci_act_8" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_act_8_to_trafo_distribucion_exci_reporte"
+            app:destination="@id/trafo_distribucion_exci_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_distribucion_exci_reporte"
+        android:name="n.com.mantenimientoelectrico.view.trafo_distribucion_exci_reporte"
+        android:label="trafo_distribucion_exci_reporte"
+        tools:layout="@layout/trafo_distribucion_exci_reporte" >
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_reporte_to_trafo_auxiliares_equipos"
+            app:destination="@id/trafo_auxiliares_equipos" />
+        <action
+            android:id="@+id/action_trafo_distribucion_exci_reporte_to_trafo_excitacion_equipos"
+            app:destination="@id/trafo_excitacion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_1"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_1"
+        android:label="trafo_potencia_act_1"
+        tools:layout="@layout/trafo_potencia_act_1" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_1_to_trafo_potencia_act_2"
+            app:destination="@id/trafo_potencia_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_2"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_2"
+        android:label="trafo_potencia_act_2"
+        tools:layout="@layout/trafo_potencia_act_2" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_2_to_trafo_potencia_act_3"
+            app:destination="@id/trafo_potencia_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_3"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_3"
+        android:label="trafo_potencia_act_3"
+        tools:layout="@layout/trafo_potencia_act_3" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_3_to_trafo_potencia_act_4"
+            app:destination="@id/trafo_potencia_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_4"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_4"
+        android:label="trafo_potencia_act_4"
+        tools:layout="@layout/trafo_potencia_act_4" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_4_to_trafo_potencia_act_5"
+            app:destination="@id/trafo_potencia_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_5"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_5"
+        android:label="trafo_potencia_act_5"
+        tools:layout="@layout/trafo_potencia_act_5" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_5_to_trafo_potencia_act_6"
+            app:destination="@id/trafo_potencia_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_6"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_6"
+        android:label="trafo_potencia_act_6"
+        tools:layout="@layout/trafo_potencia_act_6" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_6_to_trafo_potencia_act_7"
+            app:destination="@id/trafo_potencia_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_7"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_7"
+        android:label="trafo_potencia_act_7"
+        tools:layout="@layout/trafo_potencia_act_7" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_7_to_trafo_potencia_act_8"
+            app:destination="@id/trafo_potencia_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_9"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_9"
+        android:label="trafo_potencia_act_9"
+        tools:layout="@layout/trafo_potencia_act_9" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_9_to_trafo_potencia_act_10"
+            app:destination="@id/trafo_potencia_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_10"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_10"
+        android:label="trafo_potencia_act_10"
+        tools:layout="@layout/trafo_potencia_act_10" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_10_to_trafo_potencia_act_11"
+            app:destination="@id/trafo_potencia_act_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_11"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_11"
+        android:label="trafo_potencia_act_11"
+        tools:layout="@layout/trafo_potencia_act_11" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_11_to_trafo_potencia_act_12"
+            app:destination="@id/trafo_potencia_act_12" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_12"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_12"
+        android:label="trafo_potencia_act_12"
+        tools:layout="@layout/trafo_potencia_act_12" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_12_to_trafo_potencia_act_13"
+            app:destination="@id/trafo_potencia_act_13" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_13"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_13"
+        android:label="trafo_potencia_act_13"
+        tools:layout="@layout/trafo_potencia_act_13" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_13_to_trafo_potencia_act_14"
+            app:destination="@id/trafo_potencia_act_14" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_14"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_14"
+        android:label="trafo_potencia_act_14"
+        tools:layout="@layout/trafo_potencia_act_14" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_14_to_trafo_potencia_act_15"
+            app:destination="@id/trafo_potencia_act_15" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_8"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_8"
+        android:label="trafo_potencia_act_16"
+        tools:layout="@layout/trafo_potencia_act_16" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_8_to_trafo_potencia_act_9"
+            app:destination="@id/trafo_potencia_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_16"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_16"
+        android:label="trafo_potencia_act_16" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_16_to_trafo_potencia_act_17"
+            app:destination="@id/trafo_potencia_act_17" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_15"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_15"
+        android:label="trafo_potencia_act_15"
+        tools:layout="@layout/trafo_potencia_act_15" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_15_to_trafo_potencia_act_16"
+            app:destination="@id/trafo_potencia_act_16" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_act_17"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_act_17"
+        android:label="trafo_potencia_act_17"
+        tools:layout="@layout/trafo_potencia_act_17" >
+        <action
+            android:id="@+id/action_trafo_potencia_act_17_to_trafo_potencia_reporte"
+            app:destination="@id/trafo_potencia_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafo_potencia_reporte"
+        android:name="n.com.mantenimientoelectrico.view.trafo_potencia_reporte"
+        android:label="trafo_potencia_reporte"
+        tools:layout="@layout/trafo_potencia_reporte" >
+        <action
+            android:id="@+id/action_trafo_potencia_reporte_to_transformador_principal_equipos"
+            app:destination="@id/transformador_principal_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_ingresar_datos"
+        android:label="barras_principales_ingresar_datos"
+        tools:layout="@layout/barras_principales_ingresar_datos" >
+        <action
+            android:id="@+id/action_barras_principales_ingresar_datos_to_barras_principales_act_1"
+            app:destination="@id/barras_principales_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_act_1"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_act_1"
+        android:label="barras_principales_act_1"
+        tools:layout="@layout/barras_principales_act_1" >
+        <action
+            android:id="@+id/action_barras_principales_act_1_to_barras_principales_act_2"
+            app:destination="@id/barras_principales_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_act_2"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_act_2"
+        android:label="barras_principales_act_2"
+        tools:layout="@layout/barras_principales_act_2" >
+        <action
+            android:id="@+id/action_barras_principales_act_2_to_barras_principales_act_3"
+            app:destination="@id/barras_principales_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_act_3"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_act_3"
+        android:label="barras_principales_act_3"
+        tools:layout="@layout/barras_principales_act_3" >
+        <action
+            android:id="@+id/action_barras_principales_act_3_to_barras_principales_act_4"
+            app:destination="@id/barras_principales_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_act_4"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_act_4"
+        android:label="barras_principales_act_4"
+        tools:layout="@layout/barras_principales_act_4" >
+        <action
+            android:id="@+id/action_barras_principales_act_4_to_barras_principales_act_5"
+            app:destination="@id/barras_principales_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_act_5"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_act_5"
+        android:label="barras_principales_act_5"
+        tools:layout="@layout/barras_principales_act_5" >
+        <action
+            android:id="@+id/action_barras_principales_act_5_to_barras_principales_act_6"
+            app:destination="@id/barras_principales_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_act_6"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_act_6"
+        android:label="barras_principales_act_6"
+        tools:layout="@layout/barras_principales_act_6" >
+        <action
+            android:id="@+id/action_barras_principales_act_6_to_barras_principales_reporte"
+            app:destination="@id/barras_principales_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/barras_principales_reporte"
+        android:name="n.com.mantenimientoelectrico.view.barras_principales_reporte"
+        android:label="barras_principales_reporte" >
+        <action
+            android:id="@+id/action_barras_principales_reporte_to_barras_principales_equipos"
+            app:destination="@id/barras_principales_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_ingresar_datos"
+        android:label="tab_control_micros_ingresar_datos"
+        tools:layout="@layout/tab_control_micros_ingresar_datos" >
+        <action
+            android:id="@+id/action_tab_control_micros_ingresar_datos_to_tab_control_micros_act_1"
+            app:destination="@id/tab_control_micros_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_1"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_1"
+        android:label="tab_control_micros_act_1"
+        tools:layout="@layout/tab_control_micros_act_1" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_1_to_tab_control_micros_act_2"
+            app:destination="@id/tab_control_micros_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_2"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_2"
+        android:label="tab_control_micros_act_2"
+        tools:layout="@layout/tab_control_micros_act_2" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_2_to_tab_control_micros_act_3"
+            app:destination="@id/tab_control_micros_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_3"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_3"
+        android:label="tab_control_micros_act_3"
+        tools:layout="@layout/tab_control_micros_act_3" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_3_to_tab_control_micros_act_4"
+            app:destination="@id/tab_control_micros_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_4"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_4"
+        android:label="tab_control_micros_act_4"
+        tools:layout="@layout/tab_control_micros_act_4" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_4_to_tab_control_micros_act_5"
+            app:destination="@id/tab_control_micros_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_5"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_5"
+        android:label="tab_control_micros_act_5"
+        tools:layout="@layout/tab_control_micros_act_5" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_5_to_tab_control_micros_act_6"
+            app:destination="@id/tab_control_micros_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_6"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_6"
+        android:label="tab_control_micros_act_6" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_6_to_tab_control_micros_act_7"
+            app:destination="@id/tab_control_micros_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_7"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_7"
+        android:label="tab_control_micros_act_7"
+        tools:layout="@layout/tab_control_micros_act_7" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_7_to_tab_control_micros_act_8"
+            app:destination="@id/tab_control_micros_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_8"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_8"
+        android:label="tab_control_micros_act_8"
+        tools:layout="@layout/tab_control_micros_act_8" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_8_to_tab_control_micros_act_9"
+            app:destination="@id/tab_control_micros_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_9"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_9"
+        android:label="tab_control_micros_act_9"
+        tools:layout="@layout/tab_control_micros_act_9" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_9_to_tab_control_micros_act_10"
+            app:destination="@id/tab_control_micros_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_act_10"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_act_10"
+        android:label="tab_control_micros_act_10"
+        tools:layout="@layout/tab_control_micros_act_10" >
+        <action
+            android:id="@+id/action_tab_control_micros_act_10_to_tab_control_micros_reporte"
+            app:destination="@id/tab_control_micros_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_ingresar_datos"
+        android:label="tab_control_termico_micro_ingresar_datos"
+        tools:layout="@layout/tab_control_termico_micro_ingresar_datos" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_ingresar_datos_to_tab_control_termico_micro_act_1"
+            app:destination="@id/tab_control_termico_micro_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_1"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_1"
+        android:label="tab_control_termico_micro_act_1"
+        tools:layout="@layout/tab_control_termico_micro_act_1" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_1_to_tab_control_termico_micro_act_2"
+            app:destination="@id/tab_control_termico_micro_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_2"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_2"
+        android:label="tab_control_termico_micro_act_2"
+        tools:layout="@layout/tab_control_termico_micro_act_2" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_2_to_tab_control_termico_micro_act_3"
+            app:destination="@id/tab_control_termico_micro_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_3"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_3"
+        android:label="tab_control_termico_micro_act_3"
+        tools:layout="@layout/tab_control_termico_micro_act_3" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_3_to_tab_control_termico_micro_act_4"
+            app:destination="@id/tab_control_termico_micro_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_4"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_4"
+        android:label="tab_control_termico_micro_act_4"
+        tools:layout="@layout/tab_control_termico_micro_act_4" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_4_to_tab_control_termico_micro_act_5"
+            app:destination="@id/tab_control_termico_micro_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_5"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_5"
+        android:label="tab_control_termico_micro_act_5"
+        tools:layout="@layout/tab_control_termico_micro_act_5" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_5_to_tab_control_termico_micro_act_6"
+            app:destination="@id/tab_control_termico_micro_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_6"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_6"
+        android:label="tab_control_termico_micro_act_6"
+        tools:layout="@layout/tab_control_termico_micro_act_6" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_6_to_tab_control_termico_micro_act_7"
+            app:destination="@id/tab_control_termico_micro_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_7"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_7"
+        android:label="tab_control_termico_micro_act_7"
+        tools:layout="@layout/tab_control_termico_micro_act_7" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_7_to_tab_control_termico_micro_act_8"
+            app:destination="@id/tab_control_termico_micro_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_8"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_8"
+        android:label="tab_control_termico_micro_act_8"
+        tools:layout="@layout/tab_control_termico_micro_act_8" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_8_to_tab_control_termico_micro_act_9"
+            app:destination="@id/tab_control_termico_micro_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_9"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_9"
+        android:label="tab_control_termico_micro_act_9"
+        tools:layout="@layout/tab_control_termico_micro_act_9" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_9_to_tab_control_termico_micro_act_10"
+            app:destination="@id/tab_control_termico_micro_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_10"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_10"
+        android:label="tab_control_termico_micro_act_10"
+        tools:layout="@layout/tab_control_termico_micro_act_10" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_10_to_tab_control_termico_micro_act_11"
+            app:destination="@id/tab_control_termico_micro_act_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_11"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_11"
+        android:label="tab_control_termico_micro_act_11"
+        tools:layout="@layout/tab_control_termico_micro_act_11" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_11_to_tab_control_termico_micro_act_12"
+            app:destination="@id/tab_control_termico_micro_act_12" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_12"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_12"
+        android:label="tab_control_termico_micro_act_12"
+        tools:layout="@layout/tab_control_termico_micro_act_12" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_12_to_tab_control_termico_micro_act_13"
+            app:destination="@id/tab_control_termico_micro_act_13" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_13"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_13"
+        android:label="tab_control_termico_micro_act_13"
+        tools:layout="@layout/tab_control_termico_micro_act_13" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_13_to_tab_control_termico_micro_act_14"
+            app:destination="@id/tab_control_termico_micro_act_14" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_14"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_14"
+        android:label="tab_control_termico_micro_act_14"
+        tools:layout="@layout/tab_control_termico_micro_act_14" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_14_to_tab_control_termico_micro_act_15"
+            app:destination="@id/tab_control_termico_micro_act_15" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_15"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_15"
+        android:label="tab_control_termico_micro_act_15"
+        tools:layout="@layout/tab_control_termico_micro_act_15" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_15_to_tab_control_termico_micro_act_16"
+            app:destination="@id/tab_control_termico_micro_act_16" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_16"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_16"
+        android:label="tab_control_termico_micro_act_16"
+        tools:layout="@layout/tab_control_termico_micro_act_16" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_16_to_tab_control_termico_micro_act_17"
+            app:destination="@id/tab_control_termico_micro_act_17" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_act_17"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_act_17"
+        android:label="tab_control_termico_micro_act_17"
+        tools:layout="@layout/tab_control_termico_micro_act_17" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_act_17_to_tab_control_termico_micro_reporte"
+            app:destination="@id/tab_control_termico_micro_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_micro_reporte"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_micro_reporte"
+        android:label="tab_control_termico_micro_reporte"
+        tools:layout="@layout/tab_control_termico_micro_reporte" >
+        <action
+            android:id="@+id/action_tab_control_termico_micro_reporte_to_sistema_de_frenado_equipos"
+            app:destination="@id/sistema_de_frenado_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_ingresar_datos"
+        android:label="tab_control_senalizacion_ingresar_datos"
+        tools:layout="@layout/tab_control_senalizacion_ingresar_datos" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_ingresar_datos_to_tab_control_senalizacion_act_1"
+            app:destination="@id/tab_control_senalizacion_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_1"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_1"
+        android:label="tab_control_senalizacion_act_1"
+        tools:layout="@layout/tab_control_senalizacion_act_1" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_1_to_tab_control_senalizacion_act_2"
+            app:destination="@id/tab_control_senalizacion_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_2"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_2"
+        android:label="tab_control_senalizacion_act_2"
+        tools:layout="@layout/tab_control_senalizacion_act_2" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_2_to_tab_control_senalizacion_act_3"
+            app:destination="@id/tab_control_senalizacion_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_3"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_3"
+        android:label="tab_control_senalizacion_act_3"
+        tools:layout="@layout/tab_control_senalizacion_act_3" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_3_to_tab_control_senalizacion_act_4"
+            app:destination="@id/tab_control_senalizacion_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_4"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_4"
+        android:label="tab_control_senalizacion_act_4"
+        tools:layout="@layout/tab_control_senalizacion_act_4" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_4_to_tab_control_senalizacion_act_5"
+            app:destination="@id/tab_control_senalizacion_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_5"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_5"
+        android:label="tab_control_senalizacion_act_5"
+        tools:layout="@layout/tab_control_senalizacion_act_5" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_5_to_tab_control_senalizacion_act_6"
+            app:destination="@id/tab_control_senalizacion_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_6"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_6"
+        android:label="tab_control_senalizacion_act_6"
+        tools:layout="@layout/tab_control_senalizacion_act_6" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_6_to_tab_control_senalizacion_act_7"
+            app:destination="@id/tab_control_senalizacion_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_7"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_7"
+        android:label="tab_control_senalizacion_act_7"
+        tools:layout="@layout/tab_control_senalizacion_act_7" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_7_to_tab_control_senalizacion_act_8"
+            app:destination="@id/tab_control_senalizacion_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_8"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_8"
+        android:label="tab_control_senalizacion_act_8"
+        tools:layout="@layout/tab_control_senalizacion_act_8" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_8_to_tab_control_senalizacion_act_9"
+            app:destination="@id/tab_control_senalizacion_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_9"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_9"
+        android:label="tab_control_senalizacion_act_9"
+        tools:layout="@layout/tab_control_senalizacion_act_9" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_9_to_tab_control_senalizacion_act_10"
+            app:destination="@id/tab_control_senalizacion_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_act_10"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_act_10"
+        android:label="tab_control_senalizacion_act_10"
+        tools:layout="@layout/tab_control_senalizacion_act_10" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_act_10_to_tab_control_senalizacion_reporte"
+            app:destination="@id/tab_control_senalizacion_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_micros_reporte"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_micros_reporte"
+        android:label="tab_control_senalizacion_reporte"
+        tools:layout="@layout/tab_control_senalizacion_reporte" >
+        <action
+            android:id="@+id/action_tab_control_micros_reporte_to_valvula_principal_equipos"
+            app:destination="@id/valvula_principal_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_senalizacion_reporte"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_senalizacion_reporte"
+        android:label="tab_control_senalizacion_reporte" >
+        <action
+            android:id="@+id/action_tab_control_senalizacion_reporte_to_panel_instrumentos_equipos"
+            app:destination="@id/panel_instrumentos_equipos" />
+        <action
+            android:id="@+id/action_tab_control_senalizacion_reporte_to_tablero_de_control_unidad_equipos"
+            app:destination="@id/tablero_de_control_unidad_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.motor_ingresar_datos"
+        android:label="motor_ingresar_datos"
+        tools:layout="@layout/motor_ingresar_datos" >
+        <action
+            android:id="@+id/action_motor_ingresar_datos_to_motor_act_1"
+            app:destination="@id/motor_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_1"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_1"
+        android:label="motor_act_1"
+        tools:layout="@layout/motor_act_1" >
+        <action
+            android:id="@+id/action_motor_act_1_to_motor_act_2"
+            app:destination="@id/motor_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_2"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_2"
+        android:label="motor_act_2" >
+        <action
+            android:id="@+id/action_motor_act_2_to_motor_act_3"
+            app:destination="@id/motor_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_3"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_3"
+        android:label="motor_act_3"
+        tools:layout="@layout/motor_act_3" >
+        <action
+            android:id="@+id/action_motor_act_3_to_motor_act_4"
+            app:destination="@id/motor_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_4"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_4"
+        android:label="motor_act_4"
+        tools:layout="@layout/motor_act_4" >
+        <action
+            android:id="@+id/action_motor_act_4_to_motor_act_5"
+            app:destination="@id/motor_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_5"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_5"
+        android:label="motor_act_5"
+        tools:layout="@layout/motor_act_5" >
+        <action
+            android:id="@+id/action_motor_act_5_to_motor_act_6"
+            app:destination="@id/motor_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_6"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_6"
+        android:label="motor_act_6"
+        tools:layout="@layout/motor_act_6" >
+        <action
+            android:id="@+id/action_motor_act_6_to_motor_act_7"
+            app:destination="@id/motor_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_7"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_7"
+        android:label="motor_act_7"
+        tools:layout="@layout/motor_act_7" >
+        <action
+            android:id="@+id/action_motor_act_7_to_motor_act_8"
+            app:destination="@id/motor_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_8"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_8"
+        android:label="motor_act_8"
+        tools:layout="@layout/motor_act_8" >
+        <action
+            android:id="@+id/action_motor_act_8_to_motor_act_9"
+            app:destination="@id/motor_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_9"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_9"
+        android:label="motor_act_9"
+        tools:layout="@layout/motor_act_9" >
+        <action
+            android:id="@+id/action_motor_act_9_to_motor_act_10"
+            app:destination="@id/motor_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_10"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_10"
+        android:label="motor_act_10"
+        tools:layout="@layout/motor_act_10" >
+        <action
+            android:id="@+id/action_motor_act_10_to_motor_act_11"
+            app:destination="@id/motor_act_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_act_11"
+        android:name="n.com.mantenimientoelectrico.view.motor_act_11"
+        android:label="motor_act_11"
+        tools:layout="@layout/motor_act_11" >
+        <action
+            android:id="@+id/action_motor_act_11_to_motor_reporte"
+            app:destination="@id/motor_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/motor_reporte"
+        android:name="n.com.mantenimientoelectrico.view.motor_reporte"
+        android:label="motor_reporte"
+        tools:layout="@layout/motor_reporte" >
+        <action
+            android:id="@+id/action_motor_reporte_to_regulacion_equipos"
+            app:destination="@id/regulacion_equipos" />
+        <action
+            android:id="@+id/action_motor_reporte_to_sis_agua_enfriamiento_equipos"
+            app:destination="@id/sis_agua_enfriamiento_equipos" />
+        <action
+            android:id="@+id/action_motor_reporte_to_alta_presion_equipos"
+            app:destination="@id/alta_presion_equipos" />
+        <action
+            android:id="@+id/action_motor_reporte_to_ventilacion_equipos"
+            app:destination="@id/ventilacion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_ingresar_datos"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_ingresar_datos"
+        android:label="tab_control_termico_ingresar_datos"
+        tools:layout="@layout/tab_control_termico_ingresar_datos" >
+        <action
+            android:id="@+id/action_tab_control_termico_ingresar_datos_to_tab_control_termico_act_1"
+            app:destination="@id/tab_control_termico_act_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_1"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_1"
+        android:label="tab_control_termico_act_1"
+        tools:layout="@layout/tab_control_termico_act_1" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_1_to_tab_control_termico_act_2"
+            app:destination="@id/tab_control_termico_act_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_2"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_2"
+        android:label="tab_control_termico_act_2"
+        tools:layout="@layout/tab_control_termico_act_2" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_2_to_tab_control_termico_act_3"
+            app:destination="@id/tab_control_termico_act_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_3"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_3"
+        android:label="tab_control_termico_act_3"
+        tools:layout="@layout/tab_control_termico_act_3" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_3_to_tab_control_termico_act_4"
+            app:destination="@id/tab_control_termico_act_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_4"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_4"
+        android:label="tab_control_termico_act_4"
+        tools:layout="@layout/tab_control_termico_act_4" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_4_to_tab_control_termico_act_5"
+            app:destination="@id/tab_control_termico_act_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_5"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_5"
+        android:label="tab_control_termico_act_5"
+        tools:layout="@layout/tab_control_termico_act_5" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_5_to_tab_control_termico_act_6"
+            app:destination="@id/tab_control_termico_act_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_6"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_6"
+        android:label="tab_control_termico_act_6"
+        tools:layout="@layout/tab_control_termico_act_6" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_6_to_tab_control_termico_act_7"
+            app:destination="@id/tab_control_termico_act_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_7"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_7"
+        android:label="tab_control_termico_act_7"
+        tools:layout="@layout/tab_control_termico_act_7" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_7_to_tab_control_termico_act_8"
+            app:destination="@id/tab_control_termico_act_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_8"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_8"
+        android:label="tab_control_termico_act_8"
+        tools:layout="@layout/tab_control_termico_act_8" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_8_to_tab_control_termico_act_9"
+            app:destination="@id/tab_control_termico_act_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_9"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_9"
+        android:label="tab_control_termico_act_9"
+        tools:layout="@layout/tab_control_termico_act_9" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_9_to_tab_control_termico_act_10"
+            app:destination="@id/tab_control_termico_act_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_10"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_10"
+        android:label="tab_control_termico_act_10"
+        tools:layout="@layout/tab_control_termico_act_10" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_10_to_tab_control_termico_act_11"
+            app:destination="@id/tab_control_termico_act_11" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_11"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_11"
+        android:label="tab_control_termico_act_11"
+        tools:layout="@layout/tab_control_termico_act_11" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_11_to_tab_control_termico_act_12"
+            app:destination="@id/tab_control_termico_act_12" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_12"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_12"
+        android:label="tab_control_termico_act_12"
+        tools:layout="@layout/tab_control_termico_act_12" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_12_to_tab_control_termico_act_13"
+            app:destination="@id/tab_control_termico_act_13" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_act_13"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_act_13"
+        android:label="tab_control_termico_act_13"
+        tools:layout="@layout/tab_control_termico_act_13" >
+        <action
+            android:id="@+id/action_tab_control_termico_act_13_to_tab_control_termico_reporte"
+            app:destination="@id/tab_control_termico_reporte" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab_control_termico_reporte"
+        android:name="n.com.mantenimientoelectrico.view.tab_control_termico_reporte"
+        android:label="tab_control_termico_reporte"
+        tools:layout="@layout/tab_control_termico_reporte" >
+        <action
+            android:id="@+id/action_tab_control_termico_reporte_to_alta_presion_equipos"
+            app:destination="@id/alta_presion_equipos" />
+        <action
+            android:id="@+id/action_tab_control_termico_reporte_to_ventilacion_equipos"
+            app:destination="@id/ventilacion_equipos" />
+        <action
+            android:id="@+id/action_tab_control_termico_reporte_to_sis_agua_enfriamiento_equipos"
+            app:destination="@id/sis_agua_enfriamiento_equipos" />
+        <action
+            android:id="@+id/action_tab_control_termico_reporte_to_regulacion_equipos"
+            app:destination="@id/regulacion_equipos" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuSistemaReporteFragment"
+        android:name="n.com.mantenimientoelectrico.view.MenuSistemaReporteFragment"
+        android:label="fragment_menu_sistema_reporte"
+        tools:layout="@layout/fragment_menu_sistema_reporte" />
+    <fragment
+        android:id="@+id/sugerenciasFragment"
+        android:name="n.com.mantenimientoelectrico.view.SugerenciasFragment"
+        android:label="fragment_sugerencias"
+        tools:layout="@layout/fragment_sugerencias" />
+</navigation>

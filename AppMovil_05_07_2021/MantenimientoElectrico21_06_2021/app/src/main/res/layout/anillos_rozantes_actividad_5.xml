@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.anillos_rozantes_actividad_5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linLayEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorBoton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/txtEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_black"
+                android:includeFontPadding="false"
+                android:text="ANILLOS ROZANTES"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/numeroDeActividad"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/cuadro_ingreso_de_datos"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/textActividad"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/descripcion"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textActividad"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescricionActividad5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="15dp"
+                    android:text="Medir la longitud de las escobillas"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescripcion" />
+
+                <LinearLayout
+                    android:id="@+id/linLayTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/textDescricionActividad5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="INFERIOR"
+                        android:gravity="center"
+                        android:textColor="@color/colorFondo"
+                        android:fontFamily="@font/nunito_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:padding="5dp"/>
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:fontFamily="@font/nunito_black"
+                        android:gravity="center"
+                        android:text="SUPERIOR"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayTitulo">
+
+                    <EditText
+                        android:id="@+id/inferior1"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior1"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas1">
+
+                    <EditText
+                        android:id="@+id/inferior2"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior2"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas2">
+
+                    <EditText
+                        android:id="@+id/inferior3"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior3"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas3"
+                    >
+
+                    <EditText
+                        android:id="@+id/inferior4"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior4"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas4">
+
+                    <EditText
+                        android:id="@+id/inferior5"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior5"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas5"
+                    >
+
+                    <EditText
+                        android:id="@+id/inferior6"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior6"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas6">
+
+                    <EditText
+                        android:id="@+id/inferior7"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="7"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior7"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas7">
+
+                    <EditText
+                        android:id="@+id/inferior8"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior8"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas8">
+
+                    <EditText
+                        android:id="@+id/inferior9"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="9"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior9"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas9">
+
+                    <EditText
+                        android:id="@+id/inferior10"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior10"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas10">
+
+                    <EditText
+                        android:id="@+id/inferior11"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="11"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior11"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas11">
+
+                    <EditText
+                        android:id="@+id/inferior12"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior12"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas12">
+
+                    <EditText
+                        android:id="@+id/inferior13"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="13"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior13"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+                //escobillas 14
+                <LinearLayout
+                    android:id="@+id/linLayLongitudEscobillas14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas13">
+
+                    <EditText
+                        android:id="@+id/inferior14"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorFondo"
+                        android:layout_height="wrap_content"
+                        android:text="14"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/superior14"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="mm"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+                <!--                //escobillas 15
+                                <LinearLayout
+                                    android:id="@+id/linLayLongitudEscobillas15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas14">
+
+                                    <EditText
+                                        android:id="@+id/inferior15"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="15"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="10dp"/>
+
+                                    <EditText
+                                        android:id="@+id/superior15"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+                                //escobillas 16
+                                <LinearLayout
+                                    android:id="@+id/linLayLongitudEscobillas16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas15">
+
+                                    <EditText
+                                        android:id="@+id/inferior16"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="16"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="10dp"/>
+
+                                    <EditText
+                                        android:id="@+id/superior16"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+                                //escobillas 17
+                                <LinearLayout
+                                    android:id="@+id/linLayLongitudEscobillas17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas16">
+
+                                    <EditText
+                                        android:id="@+id/inferior17"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="17"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="10dp"/>
+
+                                    <EditText
+                                        android:id="@+id/superior17"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+                                //escobillas 18
+                                <LinearLayout
+                                    android:id="@+id/linLayLongitudEscobillas18"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas17">
+
+                                    <EditText
+                                        android:id="@+id/inferior18"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="18"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="10dp"/>
+
+                                    <EditText
+                                        android:id="@+id/superior18"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+                                //escobillas 19
+                                <LinearLayout
+                                    android:id="@+id/linLayLongitudEscobillas19"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas18">
+
+                                    <EditText
+                                        android:id="@+id/inferior19"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="19"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="10dp"/>
+
+                                    <EditText
+                                        android:id="@+id/superior19"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+                                //escobillas 20
+                                <LinearLayout
+                                    android:id="@+id/linLayLongitudEscobillas20"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas19">
+
+                                    <EditText
+                                        android:id="@+id/inferior20"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="20"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="10dp"/>
+
+                                    <EditText
+                                        android:id="@+id/superior20"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="mm"
+                                        android:inputType="numberDecimal"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/horasOp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Horas de operación"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/colorFondo"
+                    android:fontFamily="@font/nunito_black"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_sugerencias_act5"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextOrasOperacion"
+                    android:layout_width="225dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cuadro_ingreso_de_datos"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horasOp" />
+
+                <TextView
+                    android:id="@+id/horasProyecion"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Horas para proyección"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorFondo"
+                    android:fontFamily="@font/nunito_black"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextOrasOperacion"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextHorasProyeccion"
+                    android:layout_width="225dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cuadro_ingreso_de_datos"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horasProyecion" />
+
+                <Button
+                    android:id="@+id/btn_validar_act5"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_guardar"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="Validar"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayLongitudEscobillas14" />
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_sugerencias_act5"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_guardar"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="SUGERENCIAS"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_validar_act5" />
+
+                <TextView
+                    android:id="@+id/txtEscobillasCambiadas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="# de escobillas cambiadas"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/colorFondo"
+                    android:fontFamily="@font/nunito_black"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextHorasProyeccion"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextEscobillasCambiadas"
+                    android:layout_width="225dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cuadro_ingreso_de_datos"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEscobillasCambiadas" />
+
+                <TextView
+                    android:id="@+id/txtPortaEscobillasCambiadas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="# de portaescobillas cambiadas"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorFondo"
+                    android:fontFamily="@font/nunito_black"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextEscobillasCambiadas"/>
+
+
+                <EditText
+                    android:id="@+id/editTextPortaEscobillasCambiadas"
+                    android:layout_width="225dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cuadro_ingreso_de_datos"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPortaEscobillasCambiadas" />
+
+                <TextView
+                    android:id="@+id/textHerramientas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/herramientas_y_equipos"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextPortaEscobillasCambiadas"
+                    tools:ignore="MissingConstraints" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/estilo_spinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textHerramientas">
+
+                </Spinner>
+
+                <Button
+                    android:id="@+id/btn_guardar_act5"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_guardar"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="GUARDAR"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/textAnillosRiesgoAct5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/riesgo"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_guardar_act5"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtAnillosDeRiesgosAct5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textAnillosRiesgoAct5" />
+
+                <TextView
+                    android:id="@+id/txtAnillosObservacionesAct5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/observaciones"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAnillosDeRiesgosAct5" />
+
+                <TextView
+                    android:id="@+id/txtAnillosDeObservacionesAct5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text="Consultar las horas de operación al supervisor de operación"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.687"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAnillosObservacionesAct5" />
+
+                <TextView
+                    android:id="@+id/txtCumpleAct5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/se_cumple_la_actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAnillosDeObservacionesAct5" />
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleAct5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCumpleAct5"
+                    tools:layout_editor_absoluteX="1dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+                        <RadioGroup
+                            android:id="@+id/rg_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <RadioButton
+                                android:id="@+id/checkBoxSiAct5"
+                                android:layout_width="72sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="40dp"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/boton"
+                                android:text="SI"
+                                android:textColor="@android:color/white"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/checkBoxNoAct5"
+                                android:layout_width="72sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="40dp"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/boton"
+                                android:text="NO"
+                                android:textColor="@android:color/white" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleAct6"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:visibility="gone"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnAnillosSiguienteAct5"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Siguiente"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnAnillosAtrasAct5"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutCumpleAct5"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/btnAnillosAtrasAct5"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Atras"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnAnillosSiguienteAct5"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutCumpleAct5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="783dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAnillosAtrasAct5" />
+                <!--   -->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

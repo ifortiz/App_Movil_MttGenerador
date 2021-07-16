@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.anillos_rozantes_actividad_3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorBoton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_black"
+                android:includeFontPadding="false"
+                android:text="ANILLOS ROZANTES"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/numeroDeActividad"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorFondo"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/textActividad"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/descripcion"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textActividad"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescricionActividad1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="15dp"
+                    android:text="Inspeccionar el estado general de anillos rozantes y componentes"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescripcion" />
+
+
+
+
+                <TextView
+                    android:id="@+id/text_estado_anillos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Estado de anillos"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad1"
+                    tools:ignore="MissingConstraints" />
+
+                <RadioGroup
+                    android:id="@+id/rg_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/text_estado_anillos"
+                    tools:layout_editor_absoluteX="1dp">
+
+
+                    <RadioButton
+                        android:id="@+id/checkBox_bueno_anillos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                       android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="BUENO"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/checkBox_aceptable_anillos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="ACEPTABLE"
+                        android:textColor="@android:color/white" />
+
+                    <RadioButton
+                        android:id="@+id/checkBox_malo_anillos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="MALO"
+                        android:textColor="@android:color/white" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/text_estado_bujes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Estado de bujes aisladores"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_1"
+                    tools:ignore="MissingConstraints" />
+
+                <RadioGroup
+                    android:id="@+id/rg_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/text_estado_bujes"
+                    tools:layout_editor_absoluteX="1dp">
+
+                    <RadioButton
+                        android:id="@+id/checkBox_bueno_bujes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="BUENO"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/checkBox_aceptable_bujes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="ACEPTABLE"
+                        android:textColor="@android:color/white" />
+
+                    <RadioButton
+                        android:id="@+id/checkBox_malo_bujes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="MALO"
+                        android:textColor="@android:color/white" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/text_estado_portaescobillas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Estado de porta escobillas"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_2"
+                    tools:ignore="MissingConstraints" />
+
+
+
+                <RadioGroup
+                    android:id="@+id/rg_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/text_estado_portaescobillas"
+                    tools:layout_editor_absoluteX="1dp">
+
+                    <RadioButton
+                        android:id="@+id/checkBox_bueno_porta_escobilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="BUENO"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/checkBox_aceptable_porta_escobilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="ACEPTABLE"
+                        android:textColor="@android:color/white" />
+
+                    <RadioButton
+                        android:id="@+id/checkBox_malo_porta_escobillas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp"
+                        android:background="@drawable/boton"
+                        android:text="MALO"
+                        android:textColor="@android:color/white" />
+
+
+                </RadioGroup>
+                <Button
+                    android:id="@+id/btn_sugerencia_act3"
+                    android:visibility="gone"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_guardar"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="Sugenencias"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_3" />
+
+                <Button
+                    android:id="@+id/btn_guardar_act3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_guardar"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="GUARDAR"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_sugerencia_act3" />
+
+                <TextView
+                    android:id="@+id/textHerramientas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/herramientas_y_equipos"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="232dp"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_guardar_act3"/>
+
+                <TextView
+                    android:id="@+id/textDeHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text="Wype, lienzo, linterna, lente convexo, lupa."
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.687"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textHerramientas" />
+
+
+                <TextView
+                    android:id="@+id/textRiesgo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/riesgo"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDeHerramientas"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDeRiesgos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textRiesgo" />
+
+                <TextView
+                    android:id="@+id/textObservaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/observaciones"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDeRiesgos" />
+
+                <TextView
+                    android:id="@+id/textDeObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text="Cualquier anomalía encontrada informar a supervisión"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.687"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textObservaciones" />
+
+                <TextView
+                    android:id="@+id/textCumpleActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/se_cumple_la_actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDeObservaciones" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad"
+                    tools:layout_editor_absoluteX="1dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad"
+                        tools:layout_editor_absoluteX="1dp">
+                    <RadioGroup
+                        android:id="@+id/rg_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <RadioButton
+                            android:id="@+id/checkBoxSi"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/checkBoxNo"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+                    </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:visibility="gone"
+                            android:id="@+id/editext_no_cumpleAct6"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_siguiente1"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Siguiente"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_atras1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/btn_atras1"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Atras"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_siguiente1"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="783dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_atras1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

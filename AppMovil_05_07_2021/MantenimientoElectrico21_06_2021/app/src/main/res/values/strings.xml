@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">MttGenerador</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="recinto_de_escobillas">RECINTO DE ESCOBILLAS</string>
+    <string name="todo">TODO</string>
+    <string name="descripción_de_riesgo">RQ1.10 Contactos dermico y/u ocular con sustancias nocivas, cáusticas o corrosivas.</string>
+    <string name="contenido_de_observaciones">En lo posible evitar rociar directamente las superficie de los anillos rozantes con el solvente. Reciclaje adecuado de los materiales utilizados.</string>
+    <string name="riesgo">RIESGO:</string>
+    <string name="actividad">ACTIVIDAD:</string>
+    <string name="descripcion">DESCRIPCIÓN:</string>
+    <string name="herramientas_y_equipos">HERRAMIENTAS Y EQUIPOS:</string>
+    <string name="observaciones">OBSERVACIONES:</string>
+    <string name="se_cumple_la_actividad">¿SE CUMPLE LA ACTIVIDAD?</string>
+    <string name="Generador">GENERADOR</string>
+    <string name="Estator">ESTATOR</string>
+    <string name="rotor">ROTOR</string>
+    <string name="e_puesta_a_tierra">E. PUESTA A TIERRA</string>
+    <string name="e_sobretensi_n">E. SOBRETENSIÓN</string>
+    <string name="barras_principales">BARRAS PRINCIPALES</string>
+    <string name="alta_presi_n">ALTA PRESIÓN</string>
+    <string name="valvula_pricipal">VALVULA PRICIPAL</string>
+    <string name="trafo_principal">TRAFO PRINCIPAL</string>
+    <string name="t_c_u">T.C.U.</string>
+    <string name="trafo_auxiliares">TRAFO AUXILIARES</string>
+    <string name="s_a_e">S.A.E.</string>
+    <string name="p_i_t">P.I.T.</string>
+    <string name="ventilaci_n">VENTILACIÓN</string>
+    <string name="regulaci_n">REGULACIÓN</string>
+    <string name="trafo_excitaci_n">TRAFO EXCITACIÓN</string>
+    <string name="transformador">TRANSFORMADOR</string>
+    <string name="descargador">DESCARGADOR</string>
+    <string name="capacitor">CAPACITOR</string>
+    <string name="tablero_de_control">TABLERO DE CONTROL</string>
+    <string name="motor">MOTOR</string>
+    <string name="response_email_notexits">1</string>
+    <string name="response_not_match">2</string>
+    <string name="preferences_iduser">preferences_id_user_logeado</string>
+    <string name="preferences_id_responsable">preferences_id_user_responsable</string>
+    <string name="spiner_usuarios_name_lastname">%1$d- %2$s %3$s.</string>
+    <string name="spiner_usuarios_name_lastname_selected">%1$s %2$s.</string>
+    spiner_usuarios_name_lastname_dropdown
+    <string name="spiner_unidad_name">%1$d- %2$s.</string>
+    <string name="spinner_equipoprueba">%1$s %2$s.</string>
+    <string name="spiner_unidad_name_selected">%1$s.</string>
+    <string name="spinner_equipogeneral_ot_selected">%1$d.</string>
+    <string name="spinner_equipogeneral_ot_filter">%1$d %2$s</string>
+    <string name="preferences_id_equipo">prefrences_equipo</string>
+    <string name="preferences_id_equipo_prueba">prefrences_equipoprueba</string>
+    <string name="preferences_ot">preferences_numOt</string>
+    <string name="preferences_id_equipogeneral">preferencesequipogeneralid</string>
+    <string name="preferences_nombreEquipo">preferences_nombreequipo</string>
+    <string name="actividad_noCumplio">NO CUMPLIO</string>
+    <string name="recycler_ot">Numero de OT: %1$d</string>
+    <string name="recycler_activiad_descripcion">Actividad: %1$s</string>
+    <string name="recycler_detalleactiviad_descripcion">Descripcion: %1$s</string>
+    <string name="recycler_detalleactividad_valor">Valor: %1$s</string>
+    <string name="recycler_detalleactividad_valor_prefijo">%1$s %2$s</string>
+    <string name="recycler_dataequipo">Equipo:%1$s - Corriente Nominal:%2$s  - Serie:%3$s - Modelo:%4$s - Potencia:%5$s</string>
+    <string name="recycler_responsable">Responsable: %1$s %2$s</string>
+    <string name="recycler_actividad_permitivo">Observacion: %1$s</string>
+    <string name="recycler_numeroactividad">Numero de Actividad: %1$d</string>
+    <string name="recycler_unidad">Unidad: %1$s</string>
+    <string name="detalleactividad_unidad_medida"> %1$s  %2$s </string>
+
+
+    <string name="preferences_actividad_saved">preferences_mas_actividad_save</string>
+    <string-array name="sp_responsables">
+        <item>Fernando Ortiz Z.</item>
+        <item>Luis Pinos B.</item>
+        <item>Mesias Gahona P.</item>
+        <item>Bairon Alvarez</item>
+        <item>Raúl Sandoval</item>
+        <item>Freddy Rea</item>
+        <item>Ramiro Villa</item>
+        <item>Lisandro Cordova</item>
+    </string-array>
+
+    <string-array name="sp_equipos">
+        <item>MEGGER MIT 420</item>
+        <item>MULTIMETRO FLUKE 337</item>
+        <item>MULTI AMP</item>
+        <item>ESPINTEROMETRO</item>
+        <item>MEGGER SI 10/54</item>
+        <item>MULTIMETRO FLUKE 335</item>
+        <item>VARIAC</item>
+    </string-array>
+</resources>

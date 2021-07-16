@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.trafo_auxiliares_reglas_de_oro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFondo"
+        tools:context=".MainActivity"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nunito_black"
+            android:includeFontPadding="false"
+            android:text="@string/trafo_auxiliares"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorFondo"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/text_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="Para comenzar las actividades es obligatorio cumplir las cinco reglas de oro del electrisista"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/text_regla_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="1. Cortar todas las fuentes de tensión (Coordinar con el supervisor de operación)"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleRegla1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad6"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17"
+                        tools:layout_editor_absoluteX="1dp">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_si_regla_1"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_no_regla_1"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleRegla1"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_regla_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="2. Bloquear los aparatos de corte, colocar candado(Coordinar con el supervisor de operación)"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleRegla2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad6"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17"
+                        tools:layout_editor_absoluteX="1dp">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_si_regla_2"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_no_regla_2"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleRegla2"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_regla_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="3. Verificar la ausencia de tensión de ser posible
+"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleRegla3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad6"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical" >
+
+                        <CheckBox
+                            android:id="@+id/checkBox_si_regla_3"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_no_regla_3"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleRegla3"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_regla_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="4. Cortocircuitar y poner a tierra las fuentes de tensión, de ser posible"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleRegla4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad6"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_si_regla_4"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_no_regla_4"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleRegla4"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_regla_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="5. Delimitar y señalizar la zona de trabajo"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleRegla5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical" >
+
+                        <CheckBox
+                            android:id="@+id/checkBox_si_regla_5"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_no_regla_5"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleRegla5"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtHerramientasEquipos"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="HERRAMIENTAS Y EQUIPOS:"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtDeHerramientasEquipos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_black"
+                        android:padding="15dp"
+                        android:text="Multímetro, cable de puesta a tierra, tarjetas deseñalización, dispositivos de bloqueo(candado) cinta de señalización"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <Button
+                        android:id="@+id/btn_AtrasReglasOro"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/btn_horas"
+                        android:fontFamily="@font/nunito_black"
+                        android:inputType="textCapSentences"
+                        android:text="Atras"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/btn_SiguienteReglasOro"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_horas"
+                        android:fontFamily="@font/nunito_black"
+                        android:inputType="textCapSentences"
+                        android:text="Siguiente"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

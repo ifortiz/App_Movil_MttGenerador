@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.anillos_rozantes_actividad_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--encabezado-->
+        <LinearLayout
+            android:id="@+id/linLayEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorBoton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/txtEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_black"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="SISTEMAS"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollViewSistemas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Recinto de escobillas-->
+                <LinearLayout
+                    android:id="@+id/linLayoutRecintoEscobillas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                   android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutRecinto1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/recinto_escobillas"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutRecinto2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_recinto_de_escobillas"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="@string/recinto_de_escobillas"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutGenerador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linLayoutRecintoEscobillas"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutGenerador1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/generador2"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutGenerador2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_Generador"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="GENERADOR"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutEquipoPuestaTierra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutGenerador"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutEquipoPuestaTierra1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/equipo_puesta_tierra"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutEquipoPuestaTierra2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_EquipoPuestaTierra"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="Transformador de puesta a tierra"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutEquipoSobreTension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutEquipoPuestaTierra"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutEquipoSobreTension1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/equipo_sobre_tension"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutEquipoSobreTension2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_EquipoSobreTension"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="Equipo de sobre tensión"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutBarrasPrincipales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutEquipoSobreTension"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutBarrasPrincipales1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/barras_principales"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutBarrasPrincipales2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_BarrasPrincipales"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="BARRAS PRINCIPALES"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutAltaPresion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutBarrasPrincipales"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutAltaPresion1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/alta_presion"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutAltaPresion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_AltaPresion"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="ALTA PRESIÓN"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutValvulaPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutAltaPresion"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutValvulaPrincipal1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/valvula_principal"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutValvulaPrincipal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_ValvulaPricipal"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="Valvula Principal"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutSistemaFrenado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutValvulaPrincipal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSistemaFrenado1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/sistema_frenado"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSistemaFrenado2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_SistemaFrenado"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="SISTEMA DE FRENADO"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutTCU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutSistemaFrenado"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTCU1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/t_c_u"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTCU2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_TCU"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="TABLERO DE CONTROL DE LA UNIDAD"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutTrafoAuxiliares"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutTCU"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrafoAuxiliares1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/trafo_auxiliares"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrafoAuxiliares2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_TrafoAuxiliares"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="TRANSFORMADOR DE AUXILIARES"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutAguaEnfriamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutTrafoAuxiliares"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutAguaEnfriamiento1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/agua_enfriamiento"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutAguaEnfriamiento2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_AguaEnfriamiento"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="SISTEMA AGUA DE ENFRIAMIENTO"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutTrafoExcitacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutAguaEnfriamiento"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrafoExcitacion1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/trafo_excitacion"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrafoExcitacion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_TrafoExcitacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="TRANSFORMADORES DE EXCITACIÓN"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutRegulacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutTrafoExcitacion"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutRegulacion1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/regulacion"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutRegulacion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_Regulacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="SISTEMA DE REGULACIÓN"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutVentilacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutRegulacion"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutVentilacion1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/ventilacion"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutVentilacion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_Ventilacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="VENTILACIÓN DE LA UNIDAD"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                android:id="@+id/linLayoutPIT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linLayoutVentilacion"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPIT1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@mipmap/t_c_u"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="1dp">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPIT2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_PIT"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/btn_eleccion_sistemas"
+                        android:text="PANEL DE INSTRUMENTOS DE LA TURBINA"
+                        android:textSize="20dp"
+                        android:textAlignment="textStart"
+                        android:paddingStart="10dp"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayoutTrafoPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutPIT"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrafoPrincipal1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@mipmap/trafo_principal"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrafoPrincipal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_TrafoPrincipal"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/btn_eleccion_sistemas"
+                            android:text="TRANSFORMADOR PRINCIPAL"
+                            android:textSize="20dp"
+                            android:textAlignment="textStart"
+                            android:paddingStart="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/btn_atrasSistemas"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Atras"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutTrafoPrincipal" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_atrasSistemas"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

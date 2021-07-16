@@ -1,0 +1,3051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.estator_actividad_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--ENCABEZADO-->
+        <LinearLayout
+            android:id="@+id/linLayEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorBoton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/txtEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_black"
+                android:includeFontPadding="false"
+                android:text="@string/Estator"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollViewAct10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtAct10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtNumDeAct10"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorFondo"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/txtAct10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/descripcion"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAct10"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtDeDescricionAct10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="15dp"
+                    android:text="Medir resistencia de aislamiento de bobinados después de la limpieza."
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescripcion" />
+
+                <LinearLayout
+                    android:id="@+id/linLayAislamientoAct10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDeDescricionAct10">
+
+                    <TextView
+                        android:id="@+id/textAislamiento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:gravity="center"
+                        android:text="RESISTENCIA DE AISLAMIENTO (MΩ)"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/textAislamientoFaseTierra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:gravity="center"
+                        android:text="CON RESPECTO A TIERRA"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        tools:ignore="MissingConstraints" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollAislamiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <!--MEDICION DE LA RESISTENCIA DE AISLAMIENTO PREVIA LIMPIEZA-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!--MEDICION DE LA FASE A- TIERRA-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textA_Tierra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:fontFamily="@font/nunito_black"
+                                    android:background="@drawable/cuadro_ingreso_de_datos"
+                                    android:text="Fase A-Tierra"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    tools:ignore="MissingConstraints" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo30segATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="30''"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_30segATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="30''"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo1minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="1'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_1minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo2minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="2'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_2minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="2'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo3minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="3'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_3minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="3'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo4minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="4'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_4minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="4'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo5minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="5'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_5minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="5'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo6minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="6'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_6minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="6'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo7minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="7'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_7minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="7'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo8minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="8'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_8minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="8'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo9minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="9'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_9minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="9'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo10minATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="10'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_10minATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="10'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoIpminATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ip"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_IpminATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="Ip=R1O'/R1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoCminATierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="C'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_CminATierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="C"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+                                <!--Medición de la Fase B - Tierra-->
+
+                            </LinearLayout>
+
+                            <!--MEDICION DE LA FASE B- TIERRA-->
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textB_Tierra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:fontFamily="@font/nunito_black"
+                                    android:background="@drawable/cuadro_ingreso_de_datos"
+                                    android:gravity="center"
+                                    android:text="Fase B-Tierra"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    tools:ignore="MissingConstraints" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo30segBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="30''"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_30segCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="30''"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo1minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="1'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_1minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo2minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="2'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_2minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="2'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo3minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="3'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_3minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="3'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo4minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="4'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_4minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="4'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo5minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="5'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_5minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="5'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo6minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="6'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_6minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="6'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo7minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="7'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_7minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="7'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo8minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="8'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_8minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="8'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo9minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="9'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_9minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="9'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo10minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="10'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_10minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="10'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoIpminBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ip"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_IpBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="R1O'/R1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoCBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="C'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_CminBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="C"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--Medición de la Fase C - Tierra-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="5dp">
+
+                                <TextView
+                                    android:id="@+id/textC_Tierra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:fontFamily="@font/nunito_black"
+                                    android:background="@drawable/cuadro_ingreso_de_datos"
+                                    android:gravity="center"
+                                    android:text="Fase C-Tierra"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtAct1"
+                                    tools:ignore="MissingConstraints" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo30segCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="30''"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_30segBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="30''"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo1minBTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="1'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_1minBTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo2minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="2'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_2minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="2'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo3minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="3'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_3minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="3'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo4minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="4'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_4minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="4'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo5minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="5'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_5minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="5'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="end">
+
+                                        <EditText
+                                            android:id="@+id/valor_7minCTierra"
+                                            android:layout_width="180dp"
+                                            android:layout_height="40dp"
+                                            android:layout_marginTop="3dp"
+                                            android:background="@drawable/cuadro_ingreso_de_datos"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint="7'"
+                                            android:inputType="numberDecimal"
+                                            android:padding="5dp"
+                                            android:textColor="@android:color/white"
+                                            android:textColorHint="@android:color/darker_gray" />
+
+                                        <TextView
+                                            android:id="@+id/txtTiempo7minCTierra"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:fontFamily="@font/nunito_black"
+                                            android:padding="5dp"
+                                            android:text="7'"
+                                            android:textColor="@color/colorFondo" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo6minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="6'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_6minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="6'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo8minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="8'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_8minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="8'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo9minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="9'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_9minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="9'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo10minCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="10'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_10minCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="10'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoIpminCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ip"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_IpminCTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="Ip=R1O'/R1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtC_CTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="C'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_C_CTierra"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="C"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/textAislamientoFaseFase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:gravity="center"
+                        android:text="ENTRE FASES"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        tools:ignore="MissingConstraints" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollAislamientoFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <!--MEDICION DE LA RESISTENCIA DE AISLAMIENTO PREVIA LIMPIEZA-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!--MEDICION DE LA FASE A- FASE B-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textA_B"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:fontFamily="@font/nunito_black"
+                                    android:background="@drawable/cuadro_ingreso_de_datos"
+                                    android:text="Fase A-Fase B"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    tools:ignore="MissingConstraints" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo30segAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="30''"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_30segAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="30''"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo1minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="1'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_1minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo2minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="2'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_2minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="2'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo3minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="3'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_3minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="3'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo4minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="4'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_4minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="4'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo5minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="5'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_5minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="5'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo6minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="6'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_6minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="6'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo7minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="7'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_7minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="7'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo8minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="8'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_8minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="8'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo9minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="9'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_9minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="9'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo10minAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="10'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_10minAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="10'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoIpAB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ip"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_IpAB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="Ip=R1O'/R1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoC_AB"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="C'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_C_AB"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="C"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <!--MEDICION DE LA FASE B- FASE C-->
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textB_C"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:fontFamily="@font/nunito_black"
+                                    android:background="@drawable/cuadro_ingreso_de_datos"
+                                    android:gravity="center"
+                                    android:text="Fase B-Fase C"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    tools:ignore="MissingConstraints" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo30segBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="30''"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_30segBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="30''"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo1minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="1'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_1minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo2minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="2'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_2minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="2'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo3minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="3'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_3minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="3'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo4minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="4'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_4minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="4'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo5minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="5'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_5minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="5'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo6minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="6'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_6minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="6'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo7minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="7'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_7minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="7'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo8minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="8'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_8minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="8'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo9minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="9'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_9minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="9'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo10minBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="10'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_10minBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="10'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoIpBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ip"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_IpBC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="R1O'/R1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoCBC"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="C'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_C_BC"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="C"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--Medición de la Fase C - FASE A-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="5dp">
+
+                                <TextView
+                                    android:id="@+id/textC_A"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:fontFamily="@font/nunito_black"
+                                    android:background="@drawable/cuadro_ingreso_de_datos"
+                                    android:gravity="center"
+                                    android:text="Fase C- Fase A"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtAct1"
+                                    tools:ignore="MissingConstraints" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo30segCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="30''"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_30segCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="30''"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo1minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="1'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_1minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo2minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="2'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_2minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="2'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo3minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="3'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_3minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="3'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo4minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="4'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_4minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="4'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo5minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="5'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_5minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="5'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo6minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="6'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_6minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="6'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo7minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="7'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_7minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="7'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo8minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="8'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_8minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="8'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo9minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="9'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_9minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="9'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempo10minCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="10'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_10minCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="10'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoIpminCA"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ip"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_IpminCA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="Ip=R1O'/R1'"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/txtTiempoCminCTierra"
+                                        android:layout_width="wrap_content"
+                                        android:textColor="@color/colorFondo"
+                                        android:layout_height="wrap_content"
+                                        android:text="C'"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/nunito_black"
+                                        android:padding="5dp"/>
+
+                                    <EditText
+                                        android:id="@+id/valor_C_CA"
+                                        android:layout_width="180dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/cuadro_ingreso_de_datos"
+                                        android:ems="10"
+                                        android:gravity="center"
+                                        android:hint="C"
+                                        android:inputType="numberDecimal"
+                                        android:layout_marginTop="3dp"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+
+                    <TextView
+                        android:id="@+id/txtTemperaturaBobina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Temperatura de la bobina (°C)"
+                        android:textColor="@color/colorGrisFondo"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextTemperaturaBobinas"
+                        android:layout_width="225dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:id="@+id/txtHumedadRelativa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Humedad relativa (%)"
+                        android:textColor="@color/colorGrisFondo"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextHumedadRelativa"
+                        android:layout_width="225dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:id="@+id/txtVoltajeApli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Voltaje aplicado (VDC)"
+                        android:textColor="@color/colorGrisFondo"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextVoltajeAplicado"
+                        android:layout_width="225dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:id="@+id/txtEquipoMed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Equipo de medición utilizado"
+                        android:textColor="@color/colorGrisFondo"
+                        android:textSize="16sp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerEquipoMed"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/estilo_spinner">
+                    </Spinner>
+
+                    <Button
+                        android:id="@+id/btn_GuardarEstatorAct1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn_guardar"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="GUARDAR"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/textHerramientasAct1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="@string/herramientas_y_equipos"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/txtDeHerramientasAct1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:padding="15dp"
+                        android:text="Puestas a tierra, equipo de medición de aislamiento."
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp"/>
+
+
+                    <TextView
+                        android:id="@+id/textRiesgosActividad1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:layout_gravity="start"
+                        android:text="@string/riesgo"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDeRiesgosActividad1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textObservacionesActividad1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="@string/observaciones"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        android:layout_gravity="start"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDeObservacionesActividad1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textCumpleActividad1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="@string/se_cumple_la_actividad"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/linLayoutCumpleAct1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorFondo"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorFondo"
+                            android:orientation="vertical"
+                            >
+
+                            <CheckBox
+                                android:id="@+id/checkBoxSIAct1"
+                                android:layout_width="72sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="40dp"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/boton"
+                                android:text="SI"
+                                android:textColor="@android:color/white"
+                                />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxNoAct1"
+                                android:layout_width="72sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="40dp"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/boton"
+                                android:text="NO"
+                                android:textColor="@android:color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/editext_no_cumpleAct1"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/cuadro_no_cumple"
+                                android:hint="Escribir por que no se cumple"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:padding="5dp"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- -->
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_siguienteAct10"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Siguiente"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_atrasAct10"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayAislamientoAct10"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/btn_atrasAct10"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Atras"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_siguienteAct10"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayAislamientoAct10"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_atrasAct10" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

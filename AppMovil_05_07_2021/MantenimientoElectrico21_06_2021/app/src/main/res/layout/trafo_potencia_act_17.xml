@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.trafo_potencia_act_17">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--ENCABEZADO-->
+        <LinearLayout
+            android:id="@+id/linLayEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorBoton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/txtEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_black"
+                android:includeFontPadding="false"
+                android:text="@string/transformador"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/numeroDeActividad"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorFondo"
+                    android:gravity="center"
+                    android:text="17"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/textActividad"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescripcionAct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/descripcion"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textActividad"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescricionActividad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="15dp"
+                    android:text="Ajustar y torquear las conexiones de los terminales del transformador."
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescripcionAct" />
+
+                <TextView
+                    android:id="@+id/textHerramientas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/herramientas_y_equipos"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescricionActividad"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDeHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text="llaves mixtas boca corona, torquímetro, dados y rachet."
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textHerramientas" />
+
+
+
+                <TextView
+                    android:id="@+id/textRiesgosActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/riesgo"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDeHerramientas"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDeRiesgosActividad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textRiesgosActividad" />
+
+                <TextView
+                    android:id="@+id/textObservaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/observaciones"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDeRiesgosActividad" />
+
+                <TextView
+                    android:id="@+id/textDeObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="10dp"
+                    android:text="El torque debe estar calibrado acorde la perno y al material a torquear."
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textObservaciones" />
+
+                <TextView
+                    android:id="@+id/textCumpleActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/se_cumple_la_actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDeObservaciones" />
+
+                <LinearLayout
+                    android:id="@+id/linLayoutCumpleAct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textCumpleActividad">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFondo"
+                        android:orientation="vertical" >
+
+
+                        <CheckBox
+                            android:id="@+id/checkBoxSIAct"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="SI"
+                            android:textColor="@android:color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBoxNoAct"
+                            android:layout_width="72sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="40dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/boton"
+                            android:text="NO"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/editext_no_cumpleAct"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuadro_no_cumple"
+                            android:hint="Escribir por que no se cumple"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_siguienteAct"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Siguiente"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_atras"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutCumpleAct"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/btn_atras"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Atras"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_siguienteAct"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayoutCumpleAct"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_atras" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

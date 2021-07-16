@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.tab_control_termico_micro_act_7">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--ENCABEZADO-->
+        <LinearLayout
+            android:id="@+id/linLayEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorBoton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/txtEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_black"
+                android:includeFontPadding="false"
+                android:text="@string/tablero_de_control"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtAct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/actividad"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtNumDeAct"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorFondo"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/txtAct"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:gravity="center"
+                    android:text="@string/descripcion"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAct"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtDeDescricion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="15dp"
+                    android:text="Probar el funcionamiento del relé de protección de sobrecarga."
+                    android:textColor="@color/colorFondo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescripcion" />
+
+                <LinearLayout
+                    android:id="@+id/linLayAislamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDeDescricion"
+                    >
+                    <TextView
+                        android:id="@+id/txt_codigoEquipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="CÓDIGO DE EQUIPO (MOTOR)"
+                        android:textColor="@color/colorGrisFondo"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/codigo_de_equipo"
+                        android:layout_width="225dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/cuadro_ingreso_de_datos"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="@android:color/white"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/cuadro_no_cumple"
+                        android:layout_marginHorizontal="10dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/textPruebaTermico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_black"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="RELÉ TERMICO"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_1"
+                                android:layout_width="80dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="Marca"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <EditText
+                                android:id="@+id/marca_de_termico"
+                                android:layout_width="165dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_2"
+                                android:layout_width="80dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="Rango"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <EditText
+                                android:id="@+id/valoDesde_rango"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+                            <EditText
+                                android:id="@+id/valorAsta_rango"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_3"
+                                android:layout_width="100dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="Cal. Anterior"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <EditText
+                                android:id="@+id/valor_calAnt"
+                                android:layout_width="150dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_4"
+                                android:layout_width="100dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="Cal. Actual"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <EditText
+                                android:id="@+id/valor_CalAct"
+                                android:layout_width="150dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end">
+
+                            <TextView
+                                android:id="@+id/txt_5"
+                                android:layout_width="95dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="Veces Ir (A)"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_6"
+                                android:layout_width="105dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"
+                                android:text="Tiempo disparo (seg)"
+                                android:textColor="@color/colorFondo" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_7"
+                                android:layout_width="60dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="1.50"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <EditText
+                                android:id="@+id/valor_50_corriente"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+                            <EditText
+                                android:id="@+id/valor_50_Tiempo"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_8"
+                                android:layout_width="60dp"
+                                android:textColor="@color/colorFondo"
+                                android:layout_height="wrap_content"
+                                android:text="2.00"
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/nunito_black"
+                                android:padding="5dp"/>
+
+                            <EditText
+                                android:id="@+id/valor_100_corriente"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+                            <EditText
+                                android:id="@+id/valor_100_Tiempo"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/cuadro_ingreso_de_datos"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/darker_gray"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_validar"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn_guardar"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Validar"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+
+                    <TextView
+                        android:id="@+id/txtEquipoMed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Equipo de medición utilizado"
+                        android:textColor="@color/colorGrisFondo"
+                        android:textSize="16sp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerEquipoMed"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/estilo_spinner">
+                    </Spinner>
+
+
+
+
+                    <Button
+                        android:id="@+id/btn_sugerencias_act5"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn_guardar"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Sugerencias"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_guardar"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn_horas"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="GUARDAR"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/txt_NuevoTermico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Realizar un térmico nuevo."
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:id="@+id/btn_validar_act5"
+                        android:layout_width="250dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_guardar"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="NUEVO TÉRMICO"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/textHerramientas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="@string/herramientas_y_equipos"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/txtDeHerramientas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:padding="15dp"
+                        android:text="Equipo de prueba (Multi AMP)"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp"/>
+
+
+                    <TextView
+                        android:id="@+id/textRiesgos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:layout_gravity="start"
+                        android:text="@string/riesgo"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDeRiesgos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:padding="10dp"
+                        android:text="RF3.190.11 Uso de Megger"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textObservaciones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="@string/observaciones"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        android:layout_gravity="start"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDeObservaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:padding="10dp"
+                        android:text="Reponer el Térmico después de la prueba"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textCumpleActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="@string/se_cumple_la_actividad"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="20sp"
+                        />
+                    <!--                    CUADRO DE CUMPLIR ACTIVIDAD-->
+                    <LinearLayout
+                        android:id="@+id/linLayoutCumpleAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorFondo"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorFondo"
+                            android:orientation="vertical"
+                            >
+
+                            <CheckBox
+                                android:id="@+id/checkBoxSI"
+                                android:layout_width="72sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="40dp"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/boton"
+                                android:text="SI"
+                                android:textColor="@android:color/white"
+                                />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxNo"
+                                android:layout_width="72sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="40dp"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/boton"
+                                android:text="NO"
+                                android:textColor="@android:color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/editext_no_cumpleAct"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/cuadro_no_cumple"
+                                android:hint="Escribir por que no se cumple"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:padding="5dp"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- -->
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_siguiente"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Siguiente"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_atras"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayAislamiento"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/btn_atras"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_horas"
+                    android:fontFamily="@font/nunito_black"
+                    android:inputType="textCapSentences"
+                    android:text="Atras"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_siguiente"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linLayAislamiento"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_atras" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
